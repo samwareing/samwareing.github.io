@@ -1,0 +1,6 @@
+body {
+  background-image: url("https://picsum.photos/3840/2160?greyscale");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
