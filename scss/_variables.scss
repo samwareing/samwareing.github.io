@@ -1,0 +1,127 @@
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+$blue: #0d6efd !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #d63384 !default;
+$red: #dc3545 !default;
+$orange: #fd7e14 !default;
+$yellow: #ffc107 !default;
+$green: #198754 !default;
+$teal: #20c997 !default;
+$cyan: #0dcaf0 !default;
+
+/* SCSS HEX */
+$bdazzled-blue: #3d5a80ff;
+$pale-cerulean: #98c1d9ff;
+$light-cyan: #e0fbfcff;
+$burnt-sienna: #ee6c4dff;
+$gunmetal: #293241ff;
+
+/* SCSS Gradient */
+$gradient-top: linear-gradient(
+  0deg,
+  #3d5a80ff,
+  #98c1d9ff,
+  #e0fbfcff,
+  #ee6c4dff,
+  #293241ff
+);
+$gradient-right: linear-gradient(
+  90deg,
+  #3d5a80ff,
+  #98c1d9ff,
+  #e0fbfcff,
+  #ee6c4dff,
+  #293241ff
+);
+$gradient-bottom: linear-gradient(
+  180deg,
+  #3d5a80ff,
+  #98c1d9ff,
+  #e0fbfcff,
+  #ee6c4dff,
+  #293241ff
+);
+$gradient-left: linear-gradient(
+  270deg,
+  #3d5a80ff,
+  #98c1d9ff,
+  #e0fbfcff,
+  #ee6c4dff,
+  #293241ff
+);
+$gradient-top-right: linear-gradient(
+  45deg,
+  #3d5a80ff,
+  #98c1d9ff,
+  #e0fbfcff,
+  #ee6c4dff,
+  #293241ff
+);
+$gradient-bottom-right: linear-gradient(
+  135deg,
+  #3d5a80ff,
+  #98c1d9ff,
+  #e0fbfcff,
+  #ee6c4dff,
+  #293241ff
+);
+$gradient-top-left: linear-gradient(
+  225deg,
+  #3d5a80ff,
+  #98c1d9ff,
+  #e0fbfcff,
+  #ee6c4dff,
+  #293241ff
+);
+$gradient-bottom-left: linear-gradient(
+  315deg,
+  #3d5a80ff,
+  #98c1d9ff,
+  #e0fbfcff,
+  #ee6c4dff,
+  #293241ff
+);
+$gradient-radial: radial-gradient(
+  #3d5a80ff,
+  #98c1d9ff,
+  #e0fbfcff,
+  #ee6c4dff,
+  #293241ff
+);
+
+$bdazzled-blue: #3d5a80ff;
+$pale-cerulean: #98c1d9ff;
+$light-cyan: #e0fbfcff;
+$burnt-sienna: #ee6c4dff;
+$gunmetal: #293241ff;
+
+$theme-colors: (
+  "primary": $gunmetal,
+  "secondary": $gunmetal,
+  "success": $gunmetal,
+  "info": $gunmetal,
+  "warning": $yellow,
+  "danger": $red,
+  "light": $gray-100,
+  "dark": $gray-900,
+);
+
+$accordion-bg: theme-color("primary");
+// $accordion-color: theme-color("light");
+// $accordion-button-active-color: theme-color("primary");
+// $accordion-button-active-bg: theme-color("primary");
+// $accordion-body-color: theme-color("primary");
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";

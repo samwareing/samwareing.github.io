@@ -1,0 +1,28 @@
+body {
+  display: block;
+  text-align: left;
+  align-items: center;
+  background-image: url("/images/holly.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: block;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 767px) {
+  body {
+    background-image: url("/images/holly-mob.png");
+  }
+}
+.pillbox {
+  display: inline-block;
+}
+
+.position {
+  position: absolute;
+  top: 0.1vw;
+  left: 0.1vw;
+  /* transform: translateX(-25%) translateY(-25%); */
+  display: inline-block;
+}
