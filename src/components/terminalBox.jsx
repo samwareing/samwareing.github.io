@@ -44,7 +44,7 @@ class TerminalBox extends Component {
   handleKeyPress = (event) => {
     // keyCode 13 is the enter key
     if (event.keyCode === 13) {
-      const command = event.target.value;
+      const command = event.target.value.trim();
 
       this.addToLines(command);
 
