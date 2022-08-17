@@ -1,10 +1,11 @@
 import "./App.css";
+import TerminalBox from "./components/terminalBox";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello world.</h1>
-    </div>
+    <main className="container min-vh-100 min-vw-100 d-flex align-items-center justify-content-center">
+      <TerminalBox />
+    </main>
   );
 }
 

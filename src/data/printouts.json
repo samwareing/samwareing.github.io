@@ -1,0 +1,40 @@
+{
+    "clear": "",
+
+    "error": "Error - \"placeholder\" is not a command. Try entering \"help\" instead.",
+
+    "about": "Sam Wareing\nComputational Physicist\nReading, UK\nHighly trained and motivated software developer with a background in physics. Four years of experience in software development including back end physics simulation, GUI development, full stack web development and database management. Aspirations to branch out into other areas of software engineering. Efficient self learner. Works well in a team.\n",
+
+    "cv": "If you would like to download my CV as a .pdf click here.",
+
+    "education": "Physics and Technology of Nuclear Reactors MSc. - University of Birmingham\n  Sep 2017 - Dec 2018 - Birmingham, UK\n  Distinction\n  School of Physics and Astronomy\n\nNuclear Science and Materials BSc.- University of Birmingham\n  Sep 2014 - Jun 2017 - Birmingham, UK\n  2:1\n  School of Metallurgy and Materials\n",
+
+    "email": "samwareing@outlook.com",
+
+    "experience": "Defence Contractor - Computational Physicist\n  Oct 2020 – Current, Reading, UK\n  Confidential work on GUI development (Python, Tkinter) and physics simulation (Python and C++). Recent experience in database management (SQL/MariaDB) and website development (PHP and JavaScript). Working in a collaborative agile software development team (SCRUMBAN), with developers at home in the UK and the United States. Software development work on the implementation of a new Monte Carlo gamma-electron physics simulation code (C++), with  GPU architecture capability. Software development work extending an existing deterministic radiation transport code, creating and implementing new simulation algorithms (Python), as well as developing a new GUI for it (Python, Tkinter)\n\nDefence Contractor - Graduate Physicist\n  Sep 2018 – Oct 2020, Reading, UK\n  A highly competitive graduate scheme role that included multiple placements in different departments throughout the company. Scientific research work producing scientific technical papers. Software development placements leading towards my current role as a computational physicist. This graduate scheme involved a project management placement to produce an in house statistics technical training module.\n\nCulham Centre for Fusion Energy (CCFE) - Industrial project\n  Jun 2018 – Sep 2018, Abingdon, UK\n  An industrial research project working for CCFE. This masters project was an invaluable first experience of software development for physics simulation codes. Software development work on the integration of CCFE's MCR2S code (F95) with the Monte Carlo Reactor Physics code Serpent (C). This work is used to calculate gamma ray dose levels of a nuclear fusion reactor post irradiation, in order to assess radiation risk to reactor maintenance workers.\n\n",
+
+    "github": "https://github.com/samwareing",
+
+    "help": "Help:\n  Usage: enter one of the following commands:\n    \"about\" : prints a message about me\n    \"clear\" : clears the display\n    \"cv\" : print a link to download my curriculum vitae\n    \"education\" : prints a message about my education\n    \"email\" : prints my email address\n    \"experience\" : prints a message about my career experience\n    \"github\" : prints my github username\n    \"help\" : prints this help message\n    \"misc\" : prints a message about me as a person\n    \"phone\" : prints my phone number\n    \"references\" : prints a message about references\n    \"skills\" : prints a message about my developer skills\n    \"training\" : prints a message about my professional training qualifications\n",
+
+    "misc": "Music lover\n15+ years of experience with the guitar and the piano\nPlays in an indie rock band \nEnjoys the gym\nFull UK drivers license\n",
+
+    "phone": "+44 7903 633897",
+
+    "references": "References are available upon request, try entering \"email\".",
+
+    "skills": "Programming Languages:\n  Experienced:\n    Python, C/C++\n  Touched on:\n    SQL, HTML5, CSS3, JavaScript, PHP, Bash, F77/F95, R\n\nLibraries:\n  Experienced:\n    Tkinter\n  Touched on:\n    Django, Pandas, Numpy, Bootstrap5, Font Awesome\n  Currently learning:\n    ReactJS\n\nMiscellaneous developer skills:\n  Experienced:\n    Git, Unix, TDD, SCRUMBAN\n  Touched on:\n    DevOps\n  Currently learning:\n    Docker, Basecamp's Shape Up Method\n",
+
+    "training": "Learning Tree International - London, UK and remote:\n  HTML5, CSS3 and JavaScript: Platform-Independent Web Development - Feb 2022\n  Introduction to SQL Programming - Dec 2021\n  Introduction to Data Science, Machine Learning & AI using Python - Mar 2021\n  DevOps Foundation® (DOFD) - Nov 2020\n  Advanced Python: Best Practices and Design Patterns - Apr 2020\n  Agile Fundamentals - Sep 2019\n  Introduction to Python - Aug 2019\n\nJB International - London, UK:\n  C++ Advanced, Modern C++11/14/17 - May 2019\n  C++ Introduction - March 2019\n",
+
+    "more": "Don't be greedy.",
+    "less": "Less is sometimes more.",
+    "pwd": "You're right where you need to be.",
+    "ls": "Looks like there's nothing here.",
+    "dir": "Looks like there's nothing here.",
+    "git": "How rude!",
+    "cp": "Now why would you want to do that?",
+    "mv": "I don't think so.",
+    "python": "I really don't think so.",
+    "rm": "I really really don't think so."
+}
