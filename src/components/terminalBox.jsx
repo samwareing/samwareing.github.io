@@ -4,31 +4,14 @@ import TerminalMenuBar from "./terminalMenuBar";
 import TerminalText from "./terminalText";
 import TerminalInput from "./terminalInput";
 
-const printouts = require("../data/printouts.json");
-const allowedCommands = Object.keys(printouts);
+const commandActions = require("../data/commandActions.json");
+let allowedCommands = Object.keys(commandActions);
 
 class TerminalBox extends Component {
-  state = { lines: [] };
-
-  handlePrintoutClick = (enteredCommand) => {
-    if (enteredCommand === "clear") {
-      this.setState({ lines: [] });
-      return;
-    }
-
-    let lines = this.state.lines;
-
-    const split = printouts[enteredCommand].split("\n");
-
-    for (let key in split) {
-      lines.push("$ " + split[key]);
-      lines.push(<br key={lines.length} />);
-    }
-
-    this.setState({ lines });
-  };
+  state = { lines: [], inputValue: "" };
 
   render() {
+    const { lines, inputValue } = this.state;
     return (
       <Fragment>
         <div
@@ -41,16 +24,70 @@ class TerminalBox extends Component {
         >
           <div className="m-2">
             <TerminalMenuBar />
-            <TerminalText lines={this.state.lines} />
+            <TerminalText lines={lines} />
             <TerminalInput
-              buttonValues={allowedCommands}
-              onPrintoutClick={this.handlePrintoutClick}
+              onChange={this.handleChange}
+              value={inputValue}
+              onKeyPress={this.handleKeyPress}
             />
           </div>
         </div>
       </Fragment>
     );
   }
+
+  handleChange = (e) => {
+    const inputValue = e.target.value;
+    this.setState({ inputValue });
+  };
+
+  handleKeyPress = (event) => {
+    // keyCode 13 is the enter key
+    if (event.keyCode === 13) {
+      const command = event.target.value;
+
+      this.addToLines(command);
+
+      this.setState({ inputValue: "" });
+    }
+  };
+
+  addToLines = (enteredCommand) => {
+    if (enteredCommand === "clear") {
+      this.setState({ lines: [] });
+      return;
+    }
+
+    let { lines } = this.state;
+
+    lines.push("$ " + enteredCommand);
+    lines.push(<br key={lines.length} />);
+
+    if (enteredCommand === "") {
+      this.setState({ lines });
+      return;
+    }
+
+    if (allowedCommands.includes(enteredCommand)) {
+      const split = commandActions[enteredCommand].split("\n");
+
+      for (let key in split) {
+        lines.push(split[key]);
+        lines.push(<br key={lines.length} />);
+      }
+
+      this.setState({ lines });
+    } else {
+      const errorMessage =
+        'Error - "' +
+        enteredCommand +
+        '" is not a recognised command. Try entering "help" instead.';
+
+      lines.push(errorMessage);
+      lines.push(<br key={lines.length} />);
+      this.setState({ lines });
+    }
+  };
 }
 
 export default TerminalBox;

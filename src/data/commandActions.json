@@ -1,8 +1,6 @@
 {
     "clear": "",
 
-    "error": "Error - \"placeholder\" is not a command. Try entering \"help\" instead.",
-
     "about": "Sam Wareing\nComputational Physicist\nReading, UK\nHighly trained and motivated software developer with a background in physics. Four years of experience in software development including back end physics simulation, GUI development, full stack web development and database management. Aspirations to branch out into other areas of software engineering. Efficient self learner. Works well in a team.\n",
 
     "cv": "If you would like to download my CV as a .pdf click here.",
@@ -15,7 +13,7 @@
 
     "github": "https://github.com/samwareing",
 
-    "help": "Help:\n  Usage: enter one of the following commands:\n    \"about\" : prints a message about me\n    \"clear\" : clears the display\n    \"cv\" : print a link to download my curriculum vitae\n    \"education\" : prints a message about my education\n    \"email\" : prints my email address\n    \"experience\" : prints a message about my career experience\n    \"github\" : prints my github username\n    \"help\" : prints this help message\n    \"misc\" : prints a message about me as a person\n    \"phone\" : prints my phone number\n    \"references\" : prints a message about references\n    \"skills\" : prints a message about my developer skills\n    \"training\" : prints a message about my professional training qualifications\n",
+    "help": "Help:\n  Type one of the following commands and press enter:\n    \"about\" : prints a message about me\n    \"clear\" : clears the display\n    \"cv\" : print a link to download my curriculum vitae\n    \"education\" : prints a message about my education\n    \"email\" : prints my email address\n    \"experience\" : prints a message about my career experience\n    \"github\" : prints my github username\n    \"help\" : prints this help message\n    \"misc\" : prints a message about me as a person\n    \"phone\" : prints my phone number\n    \"references\" : prints a message about references\n    \"skills\" : prints a message about my developer skills\n    \"training\" : prints a message about my professional training qualifications\n",
 
     "misc": "Music lover\n15+ years of experience with the guitar and the piano\nPlays in an indie rock band \nEnjoys the gym\nFull UK drivers license\n",
 

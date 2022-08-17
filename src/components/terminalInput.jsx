@@ -1,13 +1,14 @@
 import React, { Fragment } from "react";
 
-const TerminalInput = (props) => {
-  const buttonClass = "btn btn-primary m-1";
+const TerminalInput = ({ onChange, value, onKeyPress }) => {
   return (
     <Fragment>
       <input
         className="form-control"
         type="text"
-        // onKeyUp={(event) => props.onKeypress(event)}
+        onChange={(event) => onChange(event)}
+        value={value}
+        onKeyUp={(event) => onKeyPress(event)}
       />
     </Fragment>
   );
