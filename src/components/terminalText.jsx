@@ -7,7 +7,7 @@ const TerminalText = (props) => {
         className="text-monospace text-white"
         style={{ fontFamily: "monospace", whiteSpace: "pre-wrap" }}
       >
-        {props.message}
+        {props.lines}
       </p>
     </Fragment>
   );

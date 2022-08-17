@@ -5,27 +5,27 @@ import TerminalText from "./terminalText";
 import TerminalInput from "./terminalInput";
 
 const printouts = require("../data/printouts.json");
-const printoutNames = Object.keys(printouts);
+const allowedCommands = Object.keys(printouts);
 
 class TerminalBox extends Component {
-  state = { printout: [] };
+  state = { lines: [] };
 
-  handlePrintoutClick = (printoutName) => {
-    if (printoutName === "clear") {
-      this.setState({ printout: [] });
+  handlePrintoutClick = (enteredCommand) => {
+    if (enteredCommand === "clear") {
+      this.setState({ lines: [] });
       return;
     }
 
-    let printout = this.state.printout;
+    let lines = this.state.lines;
 
-    const split = printouts[printoutName].split("\n");
+    const split = printouts[enteredCommand].split("\n");
 
     for (let key in split) {
-      printout.push("$ " + split[key]);
-      printout.push(<br key={printout.length} />);
+      lines.push("$ " + split[key]);
+      lines.push(<br key={lines.length} />);
     }
 
-    this.setState({ printout });
+    this.setState({ lines });
   };
 
   render() {
@@ -41,9 +41,9 @@ class TerminalBox extends Component {
         >
           <div className="m-2">
             <TerminalMenuBar />
-            <TerminalText message={this.state.printout} />
+            <TerminalText lines={this.state.lines} />
             <TerminalInput
-              buttonValues={printoutNames}
+              buttonValues={allowedCommands}
               onPrintoutClick={this.handlePrintoutClick}
             />
           </div>
