@@ -25,6 +25,9 @@
 
     "training": "Learning Tree International - London, UK and remote:\n  HTML5, CSS3 and JavaScript: Platform-Independent Web Development - Feb 2022\n  Introduction to SQL Programming - Dec 2021\n  Introduction to Data Science, Machine Learning & AI using Python - Mar 2021\n  DevOps Foundation® (DOFD) - Nov 2020\n  Advanced Python: Best Practices and Design Patterns - Apr 2020\n  Agile Fundamentals - Sep 2019\n  Introduction to Python - Aug 2019\n\nJB International - London, UK:\n  C++ Advanced, Modern C++11/14/17 - May 2019\n  C++ Introduction - March 2019",
 
+    "hello": "Hi. Try entering \"help\".",
+    "goodbye": "No, please don't go!",
+
     "more": "Don't be greedy.",
     "less": "Less is sometimes more.",
     "pwd": "You're right where you need to be.",
