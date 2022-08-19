@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from "react";
+import React, { useState, useRef, Fragment } from "react";
 
 import TerminalMenuBar from "./terminalMenuBar";
 import TerminalText from "./terminalText";
@@ -9,6 +9,7 @@ import { commands } from "./commands";
 const allowedCommands = Object.keys(commands);
 
 function TerminalBox() {
+  const focusRef = useRef(null);
   const [lines, setLinesArray] = useState([]);
   const [inputValue, setInputValue] = useState("");
 
@@ -75,10 +76,15 @@ function TerminalBox() {
     }
   };
 
+  const handleClick = () => {
+    focusRef.current.focus();
+  };
+
   return (
     <Fragment>
       <div
         className="d-flex bg-dark rounded overflow-auto"
+        onClick={handleClick}
         style={{
           height: "75vh",
           width: "75vw",
@@ -89,6 +95,7 @@ function TerminalBox() {
           <TerminalMenuBar />
           <TerminalText lines={lines} />
           <TerminalInput
+            focusRef={focusRef}
             onChange={handleChange}
             value={inputValue}
             onKeyPress={handleKeyPress}

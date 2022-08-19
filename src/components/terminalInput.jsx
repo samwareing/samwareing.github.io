@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 
-const TerminalInput = ({ onChange, value, onKeyPress }) => {
+const TerminalInput = ({ focusRef, onChange, value, onKeyPress }) => {
   return (
     <Fragment>
       <div className="row g-0">
@@ -12,6 +12,7 @@ const TerminalInput = ({ onChange, value, onKeyPress }) => {
             ${" "}
           </span>
           <input
+            ref={focusRef}
             className="bg-dark text-white"
             type="text"
             onChange={(event) => onChange(event)}
