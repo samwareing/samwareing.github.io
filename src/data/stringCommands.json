@@ -7,8 +7,6 @@
 
     "education": "Physics and Technology of Nuclear Reactors MSc. - University of Birmingham\n  Sep 2017 - Dec 2018 - Birmingham, UK\n  Distinction\n  School of Physics and Astronomy\n\nNuclear Science and Materials BSc.- University of Birmingham\n  Sep 2014 - Jun 2017 - Birmingham, UK\n  2:1\n  School of Metallurgy and Materials",
 
-    "email": "samwareing@outlook.com",
-
     "experience": "Defence Contractor - Computational Physicist\n  Oct 2020 – Current, Reading, UK\n  Confidential work on GUI development (Python, Tkinter) and physics simulation (Python and C++). Recent experience in database management (SQL/MariaDB) and website development (PHP and JavaScript). Working in a collaborative agile software development team (SCRUMBAN), with developers at home in the UK and the United States. Software development work on the implementation of a new Monte Carlo gamma-electron physics simulation code (C++), with  GPU architecture capability. Software development work extending an existing deterministic radiation transport code, creating and implementing new simulation algorithms (Python), as well as developing a new GUI for it (Python, Tkinter)\n\nDefence Contractor - Graduate Physicist\n  Sep 2018 – Oct 2020, Reading, UK\n  A highly competitive graduate scheme role that included multiple placements in different departments throughout the company. Scientific research work producing scientific technical papers. Software development placements leading towards my current role as a computational physicist. This graduate scheme involved a project management placement to produce an in house statistics technical training module.\n\nCulham Centre for Fusion Energy (CCFE) - Industrial project\n  Jun 2018 – Sep 2018, Abingdon, UK\n  An industrial research project working for CCFE. This masters project was an invaluable first experience of software development for physics simulation codes. Software development work on the integration of CCFE's MCR2S code (F95) with the Monte Carlo Reactor Physics code Serpent (C). This work is used to calculate gamma ray dose levels of a nuclear fusion reactor post irradiation, in order to assess radiation risk to reactor maintenance workers.",
 
     "github": "https://github.com/samwareing",
@@ -16,8 +14,6 @@
     "help": "Help:\n  Type one of the following commands and press enter:\n    \"about\" : prints a message about me\n    \"clear\" : clears the display\n    \"cv\" : print a link to download my curriculum vitae\n    \"education\" : prints a message about my education\n    \"email\" : prints my email address\n    \"experience\" : prints a message about my career experience\n    \"github\" : prints my github username\n    \"help\" : prints this help message\n    \"misc\" : prints a message about me as a person\n    \"phone\" : prints my phone number\n    \"references\" : prints a message about references\n    \"skills\" : prints a message about my developer skills\n    \"training\" : prints a message about my professional training qualifications",
 
     "misc": "Music lover\n15+ years of experience with the guitar and the piano\nPlays in an indie rock band \nEnjoys the gym\nFull UK drivers license",
-
-    "phone": "+44 (0)7903 633897",
 
     "references": "References are available upon request, try entering \"email\".",
 
