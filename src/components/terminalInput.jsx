@@ -12,6 +12,7 @@ const TerminalInput = ({ focusRef, onChange, value, onKeyPress }) => {
             ${" "}
           </span>
           <input
+            autoFocus
             ref={focusRef}
             className="bg-dark text-white"
             type="text"
