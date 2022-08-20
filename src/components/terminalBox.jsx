@@ -55,13 +55,13 @@ function TerminalBox() {
     }
 
     addEnteredCommandString(enteredCommand);
-
     if (enteredCommand === "") {
       return;
     }
+    const lowercaseCommand = enteredCommand.toLowerCase();
 
-    if (allowedCommands.includes(enteredCommand)) {
-      addCommandValue(enteredCommand);
+    if (allowedCommands.includes(lowercaseCommand)) {
+      addCommandValue(lowercaseCommand);
     } else {
       addErrorString(enteredCommand);
     }
