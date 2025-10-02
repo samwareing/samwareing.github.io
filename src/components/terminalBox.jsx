@@ -49,7 +49,7 @@ function TerminalBox() {
     const errorMessage =
       "sam-shell: command not found: " +
       enteredCommand +
-      ". Try typing \"help\".";
+      " Try typing \"help\".";
 
     setLinesArray((lines) => [
       ...lines,
@@ -103,21 +103,23 @@ function TerminalBox() {
       <div className={`d-flex flex-column bg-dark rounded overflow-hidden terminal-box ${isShaking ? 'shake' : ''}`}>
         <TerminalMenuBar menuBarType={menuBarType} onButtonClick={handleMenuButtonClick} />
         <div
-          className="d-flex flex-grow-1 overflow-auto"
+          className="d-flex flex-grow-1 overflow-auto terminal-content"
           onClick={handleClick}
           style={{
             flexDirection: "column-reverse",
           }}
         >
-          <div className="m-2">
+          <div className="m-2 mb-0 pb-0">
             <TerminalText lines={lines} />
-            <TerminalInput
-              focusRef={focusRef}
-              onChange={handleChange}
-              value={inputValue}
-              onKeyPress={handleKeyPress}
-            />
           </div>
+        </div>
+        <div className="terminal-input-container" onClick={handleClick}>
+          <TerminalInput
+            focusRef={focusRef}
+            onChange={handleChange}
+            value={inputValue}
+            onKeyPress={handleKeyPress}
+          />
         </div>
       </div>
     </Fragment>
