@@ -37,9 +37,9 @@ function TerminalBox() {
 
   const addErrorString = (enteredCommand) => {
     const errorMessage =
-      'Error - "' +
+      "Error - \"" +
       enteredCommand +
-      '" is not a recognised command. Try entering "help" instead.';
+      "\" is not a recognised command. Try typing \"help\".";
 
     setLinesArray((lines) => [
       ...lines,

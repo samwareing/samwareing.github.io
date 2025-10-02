@@ -5,7 +5,7 @@ const commands = {
       <br key={key + 1} />,
       "Senior Full Stack Developer",
       <br key={key + 2} />,
-      "Reading, UK",
+      "Coventry, UK",
       <br key={key + 3} />,
       "Highly skilled and results driven Senior Software Developer with 7 years of experience in full stack web development. Recently delivered a microservices platform that improved throughput by 100,000x while reducing costs by £10k/month. Expert in Python, Go, and modern DevOps practices, seeking a new challenge.",
       <br key={key + 3} />,
@@ -160,27 +160,27 @@ const commands = {
   },
 
   references: (key) => {
-    return ['References are available upon request, try entering "email".'];
+    return ["References are available upon request, try typing \"email\"."];
   },
 
   skills: (key) => {
     return [
       "Programming Languages and Databases:",
       <br key={key + 1} />,
+      "  Go, Python, VueJS (TypeScript, JavaScript, HTML and CSS)",
       <br key={key + 2} />,
-      "  Go, Python, VueJS",
-      "  TypeScript, JavaScript, HTML, CSS",
-      <br key={key + 3} />,
       "  PostgreSQL, Neo4J",
-      <br key={key + 4} />,
+      <br key={key + 3} />,
       "  Bash, C/C++, Rust",
+      <br key={key + 4} />,
       <br key={key + 5} />,
-      <br key={key + 6} />,
       "Technologies and Libraries:",
+      <br key={key + 6} />,
+      "  Linux, git, Docker, ",
       <br key={key + 7} />,
-      "  Linux, git, Docker, FastAPI, Neomodel, SQLAlchemy, Alembic, Pydantic, Pytest, Postman, k6, GCP, Coolify",
+      "  FastAPI, Neomodel, SQLAlchemy, Alembic, Pydantic, Pytest,",
       <br key={key + 8} />,
-      "    AWS, ReactJS",
+      "  ReactJS, Postman, k6, GCP, AWS",
       <br key={key + 9} />,
       <br key={key + 10} />,
       "Methodologies:",
@@ -192,7 +192,7 @@ const commands = {
 
   training: (key) => {
     return [
-      "Learning Tree International - London, UK and remote:",
+      "Learning Tree International - London, UK:",
       <br key={key + 1} />,
       "  HTML5, CSS3 and JavaScript: Platform-Independent Web Development - Feb 2022",
       <br key={key + 2} />,
@@ -219,41 +219,47 @@ const commands = {
   },
 
   hello: (key) => {
-    return ['Hi. Try entering "help".'];
+    return ["Hi. Try typing \"help\"."];
   },
   goodbye: (key) => {
-    return ["No, please don't go!"];
+    return ["No, please don't go! Try typing \"help\"."];
   },
   more: (key) => {
-    return ["Don't be greedy."];
+    return ["Don't be greedy. Try typing \"help\"."];
   },
   less: (key) => {
-    return ["Less is sometimes more."];
+    return ["Less is sometimes more. Try typing \"help\"."];
   },
   pwd: (key) => {
-    return ["You're right where you need to be."];
+    return ["You're right where you need to be. Try typing \"help\"."];
   },
   ls: (key) => {
-    return ["Looks like there's nothing here."];
+    return ["What were you looking for? Try typing \"help\""];
   },
   dir: (key) => {
-    return ["Looks like there's nothing here."];
+    return ["What were you looking for? Try typing \"help\"."];
   },
   git: (key) => {
-    return ["How rude!"];
+    return ["How rude! Try typing \"help\"."];
   },
   cp: (key) => {
-    return ["Now why would you want to do that?"];
+    return ["Now why would you want to do that? Try typing \"help\"."];
   },
   mv: (key) => {
-    return ["I don't think so."];
+    return ["I don't think so. Try typing \"help\"."];
   },
   rm: (key) => {
-    return ["I really don't think so."];
+    return ["I really don't think so. Try typing \"help\"."];
   },
   python: (key) => {
-    return ["I really really don't think so."];
+    return ["I really really don't think so. Try typing \"help\"."];
   },
+  go: (key) => {
+    return ["I really really don't think so. Try typing \"help\"."];
+  },
+  sudo: (key) => {
+    return ["That's mean. Try typing \"help\"."]
+  }
 };
 
 export { commands };
