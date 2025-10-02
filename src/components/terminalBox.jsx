@@ -84,11 +84,9 @@ function TerminalBox() {
   return (
     <Fragment>
       <div
-        className="d-flex bg-dark rounded overflow-auto"
+        className="d-flex bg-dark rounded overflow-auto terminal-box"
         onClick={handleClick}
         style={{
-          height: "75vh",
-          width: "75vw",
           flexDirection: "column-reverse",
         }}
       >

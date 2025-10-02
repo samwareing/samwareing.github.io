@@ -1,0 +1,45 @@
+.terminal-box {
+  height: 75vh;
+  width: 75vw;
+}
+
+@media (max-width: 768px) {
+  .terminal-box {
+    height: 90vh;
+    width: 95vw;
+  }
+
+  body {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+  }
+
+  main {
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 768px) {
+  .terminal-box {
+    height: 90dvh;
+  }
+
+  main {
+    height: 100dvh;
+  }
+}
+
+@supports not (height: 100dvh) {
+  @media (max-width: 768px) {
+    .terminal-box {
+      height: 90vh;
+    }
+
+    main {
+      height: 100vh;
+    }
+  }
+}
+
