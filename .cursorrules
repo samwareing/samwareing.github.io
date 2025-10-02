@@ -1,0 +1,75 @@
+# Cursor Rules for samwareing.github.io
+
+## Project Overview
+
+This is a personal portfolio/CV website built with React and hosted on GitHub Pages.
+It features a terminal-themed UI interface for displaying resume/CV information.
+
+## Tech Stack
+
+- React 18.2
+- Create React App 5.0
+- Bootstrap 5.2
+- Deployed via GitHub Pages
+
+## Project Structure
+
+- `/src/` - Source code
+  - `/components/` - React components (use .jsx extension)
+  - `App.js` - Main application component
+  - `App.css` / `index.css` - Styling
+- `/public/` - Static assets
+- `/build/` - Production build output (auto-generated)
+
+## Development Guidelines
+
+### Code Style
+
+- Use functional components with hooks
+- Component files use `.jsx` extension
+- Use camelCase for component filenames (e.g., `terminalBox.jsx`)
+- Follow React best practices and hooks patterns
+- Use Bootstrap classes for styling where appropriate
+
+### React Conventions
+
+- Prefer functional components over class components
+- Use React hooks (useState, useEffect, etc.) for state management
+- Keep components modular and reusable
+- Avoid inline styles when Bootstrap classes can be used
+
+### File Organization
+
+- Components belong in `/src/components/`
+- Each component should be in its own file
+- Import components using relative paths
+- Group related functionality together
+
+### Styling
+
+- Primary styling framework is Bootstrap 5.2
+- Custom CSS in component-specific or shared CSS files
+- Use Bootstrap utility classes (d-flex, justify-content-center, etc.)
+- Maintain consistent spacing and layout using Bootstrap grid/flexbox
+
+### Deployment
+
+- Build process: `npm run build`
+- Deploy command: `npm run deploy` (deploys to GitHub Pages)
+- Production build goes to `/build/` directory
+- Master branch contains the deployed site
+
+### Dependencies
+
+- Avoid adding unnecessary dependencies
+- Keep dependencies up to date
+- Check package.json before adding new packages
+
+## AI Assistant Guidelines
+
+- When making changes, preserve the terminal theme aesthetic
+- Test components for responsive design (Bootstrap is mobile-first)
+- Maintain consistency with existing component naming patterns
+- Consider GitHub Pages deployment constraints
+- Don't modify auto-generated files in `/build/`
+
