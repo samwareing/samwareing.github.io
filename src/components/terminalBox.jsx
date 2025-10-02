@@ -43,9 +43,9 @@ function TerminalBox() {
 
   const addErrorString = (enteredCommand) => {
     const errorMessage =
-      "Error - \"" +
+      "sam-shell: command not found: " +
       enteredCommand +
-      "\" is not a recognised command. Try typing \"help\".";
+      ". Try typing \"help\".";
 
     setLinesArray((lines) => [
       ...lines,
