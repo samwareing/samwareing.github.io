@@ -1,9 +1,11 @@
 import MacOsMenuBar from "./macOsMenuBar";
 import WindowsMenuBar from "./windowsMenuBar";
+import UbuntuMenuBar from "./ubuntuMenuBar";
 
 export const MenuBarType = {
   MACOS: "macos",
   WINDOWS: "windows",
+  UBUNTU: "ubuntu",
 };
 
 /**
@@ -17,6 +19,8 @@ export const getMenuBarComponent = (type) => {
       return MacOsMenuBar;
     case MenuBarType.WINDOWS:
       return WindowsMenuBar;
+    case MenuBarType.UBUNTU:
+      return UbuntuMenuBar;
     default:
       return MacOsMenuBar; // Default to macOS
   }

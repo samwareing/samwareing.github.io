@@ -249,3 +249,37 @@ code {
 .windows-button-close:hover {
   background-color: #e81123;
 }
+
+/* Ubuntu Menu Bar Styles */
+.ubuntu-menu-bar {
+  background-color: #001431;
+  border-bottom: 1px solid #002a5a;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.ubuntu-title {
+  font-size: 13px;
+  color: #ebebeb;
+  padding-left: 8px;
+}
+
+.ubuntu-button {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ebebeb;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  border-radius: 4px;
+}
+
+.ubuntu-button:hover {
+  background-color: #002a5a;
+}
+
+.ubuntu-button-close:hover {
+  background-color: #da4453;
+}

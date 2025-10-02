@@ -38,13 +38,17 @@ export const detectOS = () => {
 
 /**
  * Gets the appropriate menu bar type based on detected OS
- * @returns {string} 'macos' or 'windows'
+ * @returns {string} 'macos', 'windows', or 'ubuntu'
  */
 export const getMenuBarTypeFromOS = () => {
   const os = detectOS();
 
   if (os === 'macos' || os === 'ios') {
     return 'macos';
+  }
+
+  if (os === 'linux') {
+    return 'ubuntu';
   }
 
   return 'windows';
