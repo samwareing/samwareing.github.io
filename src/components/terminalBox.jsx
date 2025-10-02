@@ -15,6 +15,7 @@ function TerminalBox() {
   const [lines, setLinesArray] = useState([]);
   const [inputValue, setInputValue] = useState("");
   const [menuBarType] = useState(() => getMenuBarTypeFromOS());
+  const [isShaking, setIsShaking] = useState(false);
 
   useEffect(() => {
     if (focusRef.current) {
@@ -90,10 +91,17 @@ function TerminalBox() {
     focusRef.current.focus();
   };
 
+  const handleMenuButtonClick = () => {
+    setIsShaking(true);
+    setTimeout(() => {
+      setIsShaking(false);
+    }, 250);
+  };
+
   return (
     <Fragment>
-      <div className="d-flex flex-column bg-dark rounded overflow-hidden terminal-box">
-        <TerminalMenuBar menuBarType={menuBarType} />
+      <div className={`d-flex flex-column bg-dark rounded overflow-hidden terminal-box ${isShaking ? 'shake' : ''}`}>
+        <TerminalMenuBar menuBarType={menuBarType} onButtonClick={handleMenuButtonClick} />
         <div
           className="d-flex flex-grow-1 overflow-auto"
           onClick={handleClick}
