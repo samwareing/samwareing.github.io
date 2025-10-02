@@ -1,3 +1,149 @@
+/* Warp Theme Colors */
+
+/* Accent */
+.text-accent {
+  color: #ffcc66 !important;
+}
+
+.bg-accent {
+  background-color: #ffcc66 !important;
+}
+
+/* Normal Terminal Colors */
+.text-black {
+  color: #171b24 !important;
+}
+
+.bg-black {
+  background-color: #171b24 !important;
+}
+
+.text-red {
+  color: #ed8274 !important;
+}
+
+.bg-red {
+  background-color: #ed8274 !important;
+}
+
+.text-green {
+  color: #87d96c !important;
+}
+
+.bg-green {
+  background-color: #87d96c !important;
+}
+
+.text-yellow {
+  color: #facc6e !important;
+}
+
+.bg-yellow {
+  background-color: #facc6e !important;
+}
+
+.text-blue {
+  color: #6dcbfa !important;
+}
+
+.bg-blue {
+  background-color: #6dcbfa !important;
+}
+
+.text-magenta {
+  color: #dabafa !important;
+}
+
+.bg-magenta {
+  background-color: #dabafa !important;
+}
+
+.text-cyan {
+  color: #90e1c6 !important;
+}
+
+.bg-cyan {
+  background-color: #90e1c6 !important;
+}
+
+.text-white {
+  color: #ebebeb !important;
+}
+
+.bg-white {
+  background-color: #c7c7c7 !important;
+}
+
+/* Bright Terminal Colors */
+.text-bright-black {
+  color: #686868 !important;
+}
+
+.bg-bright-black {
+  background-color: #686868 !important;
+}
+
+.text-bright-red {
+  color: #f28779 !important;
+}
+
+.bg-bright-red {
+  background-color: #f28779 !important;
+}
+
+.text-bright-green {
+  color: #d5ff80 !important;
+}
+
+.bg-bright-green {
+  background-color: #d5ff80 !important;
+}
+
+.text-bright-yellow {
+  color: #ffd173 !important;
+}
+
+.bg-bright-yellow {
+  background-color: #ffd173 !important;
+}
+
+.text-bright-blue {
+  color: #73d0ff !important;
+}
+
+.bg-bright-blue {
+  background-color: #73d0ff !important;
+}
+
+.text-bright-magenta {
+  color: #dfbfff !important;
+}
+
+.bg-bright-magenta {
+  background-color: #dfbfff !important;
+}
+
+.text-bright-cyan {
+  color: #95e6cb !important;
+}
+
+.bg-bright-cyan {
+  background-color: #95e6cb !important;
+}
+
+.text-bright-white {
+  color: #ffffff !important;
+}
+
+.bg-bright-white {
+  background-color: #ffffff !important;
+}
+
+/* Override Bootstrap defaults */
+.bg-dark {
+  background-color: #001431 !important;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
