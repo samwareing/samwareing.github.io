@@ -1,99 +1,126 @@
-/* Warp Theme Colors */
+:root {
+  --color-accent: #ffcc66;
+  --color-black: #171b24;
+  --color-red: #ed8274;
+  --color-green: #87d96c;
+  --color-yellow: #facc6e;
+  --color-blue: #6dcbfa;
+  --color-magenta: #dabafa;
+  --color-cyan: #90e1c6;
+  --color-white-text: #ebebeb;
+  --color-white-bg: #c7c7c7;
+
+  --color-bg-dark: #001431;
+  --color-bg-dark-gradient-start: #001a3d;
+  --color-bg-dark-gradient-end: #001431;
+  --color-border-dark: #002a5a;
+  --color-placeholder: #6c757d;
+
+  --color-macos-close: #ff5f57;
+  --color-macos-close-border: #e0443e;
+  --color-macos-minimize: #ffbd2e;
+  --color-macos-minimize-border: #dea123;
+  --color-macos-maximize: #28c840;
+  --color-macos-maximize-border: #1aab29;
+
+  --color-windows-close-hover: #e81123;
+  --color-ubuntu-close-hover: #da4453;
+}
 
 .text-accent {
-  color: #ffcc66 !important;
+  color: var(--color-accent) !important;
 }
 
 .bg-accent {
-  background-color: #ffcc66 !important;
+  background-color: var(--color-accent) !important;
 }
 
 .text-black {
-  color: #171b24 !important;
+  color: var(--color-black) !important;
 }
 
 .bg-black {
-  background-color: #171b24 !important;
+  background-color: var(--color-black) !important;
 }
 
 .text-red {
-  color: #ed8274 !important;
+  color: var(--color-red) !important;
 }
 
 .bg-red {
-  background-color: #ed8274 !important;
+  background-color: var(--color-red) !important;
 }
 
 .text-green {
-  color: #87d96c !important;
+  color: var(--color-green) !important;
 }
 
 .bg-green {
-  background-color: #87d96c !important;
+  background-color: var(--color-green) !important;
 }
 
 .text-yellow {
-  color: #facc6e !important;
+  color: var(--color-yellow) !important;
 }
 
 .bg-yellow {
-  background-color: #facc6e !important;
+  background-color: var(--color-yellow) !important;
 }
 
 .text-blue {
-  color: #6dcbfa !important;
+  color: var(--color-blue) !important;
 }
 
 .bg-blue {
-  background-color: #6dcbfa !important;
+  background-color: var(--color-blue) !important;
 }
 
 .text-magenta {
-  color: #dabafa !important;
+  color: var(--color-magenta) !important;
 }
 
 .bg-magenta {
-  background-color: #dabafa !important;
+  background-color: var(--color-magenta) !important;
 }
 
 .text-cyan {
-  color: #90e1c6 !important;
+  color: var(--color-cyan) !important;
 }
 
 .bg-cyan {
-  background-color: #90e1c6 !important;
+  background-color: var(--color-cyan) !important;
 }
 
 .text-white {
-  color: #ebebeb !important;
+  color: var(--color-white-text) !important;
 }
 
 .bg-white {
-  background-color: #c7c7c7 !important;
+  background-color: var(--color-white-bg) !important;
 }
+
 .terminal-input-placeholder::placeholder {
-  color: #6c757d;
+  color: var(--color-placeholder);
   opacity: 1;
 }
 
 .terminal-input-placeholder::-webkit-input-placeholder {
-  color: #6c757d;
+  color: var(--color-placeholder);
   opacity: 1;
 }
 
 .terminal-input-placeholder::-moz-placeholder {
-  color: #6c757d;
+  color: var(--color-placeholder);
   opacity: 1;
 }
 
 .terminal-input-placeholder:-ms-input-placeholder {
-  color: #6c757d;
+  color: var(--color-placeholder);
   opacity: 1;
 }
 
-/* Override Bootstrap defaults */
 .bg-dark {
-  background-color: #001431 !important;
+  background-color: var(--color-bg-dark) !important;
 }
 
 body {
@@ -107,11 +134,10 @@ code {
   font-family: 'Fira Code', monospace;
 }
 
-/* macOS Menu Bar Styles */
 .macos-menu-bar {
-  background: linear-gradient(180deg, #001a3d 0%, #001431 100%);
+  background: linear-gradient(180deg, var(--color-bg-dark-gradient-start) 0%, var(--color-bg-dark-gradient-end) 100%);
   border-radius: 6px 6px 0 0;
-  border-bottom: 1px solid #002a5a;
+  border-bottom: 1px solid var(--color-border-dark);
   user-select: none;
   -webkit-user-select: none;
   flex-shrink: 0;
@@ -143,40 +169,39 @@ code {
 }
 
 .macos-button-close {
-  background-color: #ff5f57;
-  border: 0.5px solid #e0443e;
+  background-color: var(--color-macos-close);
+  border: 0.5px solid var(--color-macos-close-border);
 }
 
 .macos-button-minimize {
-  background-color: #ffbd2e;
-  border: 0.5px solid #dea123;
+  background-color: var(--color-macos-minimize);
+  border: 0.5px solid var(--color-macos-minimize-border);
 }
 
 .macos-button-maximize {
-  background-color: #28c840;
-  border: 0.5px solid #1aab29;
+  background-color: var(--color-macos-maximize);
+  border: 0.5px solid var(--color-macos-maximize-border);
 }
 
 .macos-title {
   font-size: 13px;
-  color: #ebebeb;
+  color: var(--color-white-text);
   font-weight: 400;
   text-align: center;
   pointer-events: none;
   opacity: 0.8;
 }
 
-/* Windows Menu Bar Styles */
 .windows-menu-bar {
-  background-color: #001431;
-  border-bottom: 1px solid #002a5a;
+  background-color: var(--color-bg-dark);
+  border-bottom: 1px solid var(--color-border-dark);
   user-select: none;
   -webkit-user-select: none;
 }
 
 .windows-title {
   font-size: 13px;
-  color: #ebebeb;
+  color: var(--color-white-text);
   padding-left: 8px;
 }
 
@@ -186,30 +211,29 @@ code {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ebebeb;
+  color: var(--color-white-text);
   cursor: pointer;
   transition: background-color 0.2s;
 }
 
 .windows-button:hover {
-  background-color: #002a5a;
+  background-color: var(--color-border-dark);
 }
 
 .windows-button-close:hover {
-  background-color: #e81123;
+  background-color: var(--color-windows-close-hover);
 }
 
-/* Ubuntu Menu Bar Styles */
 .ubuntu-menu-bar {
-  background-color: #001431;
-  border-bottom: 1px solid #002a5a;
+  background-color: var(--color-bg-dark);
+  border-bottom: 1px solid var(--color-border-dark);
   user-select: none;
   -webkit-user-select: none;
 }
 
 .ubuntu-title {
   font-size: 13px;
-  color: #ebebeb;
+  color: var(--color-white-text);
   padding-left: 8px;
 }
 
@@ -219,16 +243,16 @@ code {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ebebeb;
+  color: var(--color-white-text);
   cursor: pointer;
   transition: background-color 0.2s;
   border-radius: 4px;
 }
 
 .ubuntu-button:hover {
-  background-color: #002a5a;
+  background-color: var(--color-border-dark);
 }
 
 .ubuntu-button-close:hover {
-  background-color: #da4453;
+  background-color: var(--color-ubuntu-close-hover);
 }
