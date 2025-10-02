@@ -96,20 +96,48 @@ const commands = {
   },
 
   help: (key) => {
-    const result = [
-      "Help:",
-      <br key={key + 1} />,
-      "  Type one of the following commands and press enter:",
-      <br key={key + 2} />
-    ];
+    const result = [];
+    let keyCounter = 1;
 
-    let keyCounter = 3;
+    // Description
+    result.push(
+      cvData.helpText.description,
+      <br key={key + keyCounter++} />,
+      <br key={key + keyCounter++} />
+    );
+
+    // Usage
+    result.push(
+      "Usage:",
+      <br key={key + keyCounter++} />,
+      `  ${cvData.helpText.usage}`,
+      <br key={key + keyCounter++} />,
+      <br key={key + keyCounter++} />
+    );
+
+    // Available Commands header
+    result.push(
+      "Available Commands:",
+      <br key={key + keyCounter++} />
+    );
+
+    // Find the longest command name for alignment
+    const maxLength = Math.max(...cvData.helpText.commands.map(cmd => cmd.name.length));
+
+    // List commands with aligned descriptions (Cobra style)
     cvData.helpText.commands.forEach((cmd) => {
+      const padding = ' '.repeat(maxLength - cmd.name.length + 2);
       result.push(
-        `    "${cmd.name}" : ${cmd.description}`,
+        `  ${cmd.name}${padding}${cmd.description}`,
         <br key={key + keyCounter++} />
       );
     });
+
+    // Footer
+    result.push(
+      <br key={key + keyCounter++} />,
+      cvData.helpText.footer
+    );
 
     return result;
   },

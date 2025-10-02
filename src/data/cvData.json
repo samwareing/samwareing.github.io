@@ -139,56 +139,59 @@
     "Full UK drivers license"
   ],
   "helpText": {
+    "description": "Interactive CV terminal for Sam Wareing - Senior Full Stack Developer",
+    "usage": "Type a command and press Enter",
     "commands": [
       {
         "name": "about",
-        "description": "prints a message about me"
+        "description": "Display professional summary and contact information"
       },
       {
         "name": "clear",
-        "description": "clears the display"
+        "description": "Clear the terminal display"
       },
       {
         "name": "education",
-        "description": "prints a message about my education"
+        "description": "Show educational background and qualifications"
       },
       {
         "name": "email",
-        "description": "prints my email address"
+        "description": "Display email address"
       },
       {
         "name": "experience",
-        "description": "prints a message about my career experience"
+        "description": "Show professional work experience and achievements"
       },
       {
         "name": "github",
-        "description": "prints my github site"
+        "description": "Display GitHub profile link"
       },
       {
         "name": "help",
-        "description": "prints this help message"
+        "description": "Display this help message"
       },
       {
         "name": "misc",
-        "description": "prints a message about me as a person"
+        "description": "Show personal interests and hobbies"
       },
       {
         "name": "phone",
-        "description": "prints my phone number"
+        "description": "Display phone number"
       },
       {
         "name": "references",
-        "description": "prints a message about my references"
+        "description": "Information about references"
       },
       {
         "name": "skills",
-        "description": "prints a message about my developer skills"
+        "description": "Show technical skills and proficiencies"
       },
       {
         "name": "training",
-        "description": "prints a message about my professional training qualifications"
+        "description": "Display professional training and certifications"
       }
-    ]
+    ],
+    "footer": "Type any command name for more information."
   },
   "easterEggs": {
     "hello": "Hi. Try typing \"help\".",
@@ -204,7 +207,7 @@
     "rm": "I really don't think so. Try typing \"help\".",
     "python": "I really really don't think so. Try typing \"help\".",
     "go": "I really really don't think so. Try typing \"help\".",
-    "sudo": "That's mean. Try typing \"help\"."
+    "sudo": "That's mean, I don't even have a sudoers file. This incident will not be reported as this is a static site. Try typing \"help\"."
   },
   "references": "References are available upon request, try typing \"email\"."
 }
