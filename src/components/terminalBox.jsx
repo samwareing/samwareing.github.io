@@ -58,7 +58,8 @@ function TerminalBox() {
     if (enteredCommand === "") {
       return;
     }
-    const lowercaseCommand = enteredCommand.toLowerCase();
+    const [command, ...args] = enteredCommand.trim().split(/\s+/);
+    const lowercaseCommand = command.toLowerCase();
 
     if (allowedCommands.includes(lowercaseCommand)) {
       addCommandValue(lowercaseCommand);
@@ -92,7 +93,7 @@ function TerminalBox() {
         }}
       >
         <div className="m-2">
-          <TerminalMenuBar />
+          <TerminalMenuBar/>
           <TerminalText lines={lines} />
           <TerminalInput
             focusRef={focusRef}
