@@ -1,0 +1,211 @@
+{
+  "about": {
+    "name": "Sam Wareing",
+    "title": "Senior Full Stack Developer",
+    "location": "Coventry, UK",
+    "summary": "Highly skilled and results driven Senior Software Developer with 7 years of experience in full stack web development. Recently delivered a microservices platform that improved throughput by 100,000x while reducing costs by £10k/month. Expert in Python, Go, and modern DevOps practices, seeking a new challenge."
+  },
+  "contact": {
+    "email": "samwareing@outlook.com",
+    "phone": "+447903633897",
+    "github": "https://github.com/samwareing"
+  },
+  "education": [
+    {
+      "degree": "Physics and Technology of Nuclear Reactors MSc.",
+      "institution": "University of Birmingham",
+      "period": "Sep 2017 - Dec 2018",
+      "location": "Birmingham, UK",
+      "grade": "Distinction",
+      "department": "School of Physics and Astronomy"
+    },
+    {
+      "degree": "Nuclear Science and Materials BSc.",
+      "institution": "University of Birmingham",
+      "period": "Sep 2014 - Jun 2017",
+      "location": "Birmingham, UK",
+      "grade": "2:1",
+      "department": "School of Metallurgy and Materials"
+    }
+  ],
+  "experience": [
+    {
+      "company": "Colorifix",
+      "title": "Senior Full Stack Developer",
+      "period": "Oct 2023 – Present",
+      "location": "Coventry, UK",
+      "description": [
+        "Led full stack development and delivery of the Webclient product, using Python (FastAPI, Neo4J), Go (PostgreSQL) and VueJS. Webclient is a web service and portal allowing customers to analyse large amounts of scientific IoT data originating from Colorifix biofermentors, as well as creating scientific reports and tracking inventory.",
+        "Took full ownership of the project, and provided technical leadership to junior colleagues. Directed system architecture and DevOps strategy, overseeing GitLab CI/CD, and k6 load testing. Responsible for stakeholder management with international clients, leading team meetings, and delivering presentations to the company at large.",
+        "Spearheaded the release of Webclient to global customers, via Google Cloud Platform (GCP). Redesigned the system into a cloud-native microservice architecture, building a new high performance service in Go with Kafka. Write throughput was improved by over 5 orders of magnitude - allowing the company to achieve real-time data analytics, scaling up from 3 to 100s of fermentors, whilst simultaneously reducing occurrences of data loss to zero, and saving over £10,000 per month on cloud costs."
+      ]
+    },
+    {
+      "company": "Black Cow Technology",
+      "title": "Software Developer",
+      "period": "Sep 2022 – Sep 2023",
+      "location": "Reading, UK",
+      "description": [
+        "Backend software development for the Multiplayer Server (MPS) and Authentication Service projects. Development using Python, FastAPI, SQLAlchemy, Redis and AWS. Implemented features for the MPS library code for multiple player connection, delivering a scalable, high-performance multiplayer platform capable of supporting large concurrent player sessions. Designed developer friendly APIs, allowing game developers to implement multiplayer functionality with ease, reducing typical time to market by 60%. Implemented a comprehensive load testing suite (k6) and CLI tooling (Rust) to support rapid development cycles."
+      ]
+    },
+    {
+      "company": "Defence Contractor",
+      "title": "Computational Physicist",
+      "period": "Oct 2018 – Sep 2022",
+      "location": "Reading, UK",
+      "description": [
+        "Confidential scientific software development work. Software development on a novel Monte Carlo radiation physics code for GPU (C++), an interface for deterministic radiation physics code (Python), and an internal web portal (PHP/MariaDB) serving 50+ users across 4 departments. Agile collaboration with developers in the UK and the US."
+      ]
+    },
+    {
+      "company": "Culham Centre for Fusion Energy (CCFE)",
+      "title": "Industrial project",
+      "period": "Jun 2018 – Sep 2018",
+      "location": "Abingdon, UK",
+      "description": [
+        "An industrial research project in the Neutronics Team. Software development work on the integration of a custom module (Fortran95) within the Serpent Monte Carlo Reactor Physics code (C)."
+      ]
+    }
+  ],
+  "skills": {
+    "programmingLanguagesAndDatabases": [
+      "Go, Python, VueJS (TypeScript, JavaScript, HTML and CSS)",
+      "PostgreSQL, Neo4J",
+      "Bash, C/C++, Rust"
+    ],
+    "technologiesAndLibraries": [
+      "Linux, git, Docker, ",
+      "FastAPI, Neomodel, SQLAlchemy, Alembic, Pydantic, Pytest,",
+      "ReactJS, Postman, k6, GCP, Kafka, AWS"
+    ],
+    "methodologies": [
+      "Test Driven Development, ShapeUp, Agile, Scrum, Kanban"
+    ]
+  },
+  "training": [
+    {
+      "organization": "Learning Tree International - London, UK",
+      "courses": [
+        {
+          "name": "HTML5, CSS3 and JavaScript: Platform-Independent Web Development",
+          "date": "Feb 2022"
+        },
+        {
+          "name": "Introduction to SQL Programming",
+          "date": "Dec 2021"
+        },
+        {
+          "name": "Introduction to Data Science, Machine Learning & AI using Python",
+          "date": "Mar 2021"
+        },
+        {
+          "name": "DevOps Foundation® (DOFD)",
+          "date": "Nov 2020"
+        },
+        {
+          "name": "Advanced Python: Best Practices and Design Patterns",
+          "date": "Apr 2020"
+        },
+        {
+          "name": "Agile Fundamentals",
+          "date": "Sep 2019"
+        },
+        {
+          "name": "Introduction to Python",
+          "date": "Aug 2019"
+        }
+      ]
+    },
+    {
+      "organization": "JB International - London, UK",
+      "courses": [
+        {
+          "name": "C++ Advanced, Modern C++11/14/17",
+          "date": "May 2019"
+        },
+        {
+          "name": "C++ Introduction",
+          "date": "March 2019"
+        }
+      ]
+    }
+  ],
+  "misc": [
+    "Music lover",
+    "15+ years of experience with the guitar and the piano",
+    "Plays in an indie rock band ",
+    "Enjoys the gym",
+    "Full UK drivers license"
+  ],
+  "helpText": {
+    "commands": [
+      {
+        "name": "about",
+        "description": "prints a message about me"
+      },
+      {
+        "name": "clear",
+        "description": "clears the display"
+      },
+      {
+        "name": "education",
+        "description": "prints a message about my education"
+      },
+      {
+        "name": "email",
+        "description": "prints my email address"
+      },
+      {
+        "name": "experience",
+        "description": "prints a message about my career experience"
+      },
+      {
+        "name": "github",
+        "description": "prints my github site"
+      },
+      {
+        "name": "help",
+        "description": "prints this help message"
+      },
+      {
+        "name": "misc",
+        "description": "prints a message about me as a person"
+      },
+      {
+        "name": "phone",
+        "description": "prints my phone number"
+      },
+      {
+        "name": "references",
+        "description": "prints a message about my references"
+      },
+      {
+        "name": "skills",
+        "description": "prints a message about my developer skills"
+      },
+      {
+        "name": "training",
+        "description": "prints a message about my professional training qualifications"
+      }
+    ]
+  },
+  "easterEggs": {
+    "hello": "Hi. Try typing \"help\".",
+    "goodbye": "No, please don't go! Try typing \"help\".",
+    "more": "Don't be greedy. Try typing \"help\".",
+    "less": "Less is sometimes more. Try typing \"help\".",
+    "pwd": "You're right where you need to be. Try typing \"help\".",
+    "ls": "What were you looking for? Try typing \"help\"",
+    "dir": "What were you looking for? Try typing \"help\".",
+    "git": "How rude! Try typing \"help\".",
+    "cp": "Now why would you want to do that? Try typing \"help\".",
+    "mv": "I don't think so. Try typing \"help\".",
+    "rm": "I really don't think so. Try typing \"help\".",
+    "python": "I really really don't think so. Try typing \"help\".",
+    "go": "I really really don't think so. Try typing \"help\".",
+    "sudo": "That's mean. Try typing \"help\"."
+  },
+  "references": "References are available upon request, try typing \"email\"."
+}
+

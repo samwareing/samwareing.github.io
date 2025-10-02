@@ -1,14 +1,17 @@
+import cvData from '../data/cvData.json';
+
 const commands = {
   about: (key) => {
+    const { name, title, location, summary } = cvData.about;
     return [
-      "Sam Wareing",
+      name,
       <br key={key + 1} />,
-      "Senior Full Stack Developer",
+      title,
       <br key={key + 2} />,
-      "Coventry, UK",
+      location,
       <br key={key + 3} />,
-      "Highly skilled and results driven Senior Software Developer with 7 years of experience in full stack web development. Recently delivered a microservices platform that improved throughput by 100,000x while reducing costs by £10k/month. Expert in Python, Go, and modern DevOps practices, seeking a new challenge.",
-      <br key={key + 3} />,
+      summary,
+      <br key={key + 4} />,
     ];
   },
 
@@ -16,249 +19,237 @@ const commands = {
     return [""];
   },
 
-  // cv: (key) => {
-  //   return ["If you would like to download my CV as a .pdf click here."];
-  // },
-
   education: (key) => {
-    return [
-      "Physics and Technology of Nuclear Reactors MSc. - University of Birmingham",
-      <br key={key + 1} />,
-      "  Sep 2017 - Dec 2018 - Birmingham, UK",
-      <br key={key + 2} />,
-      "  Distinction",
-      <br key={key + 3} />,
-      "  School of Physics and Astronomy",
-      <br key={key + 4} />,
-      <br key={key + 5} />,
-      "Nuclear Science and Materials BSc.- University of Birmingham",
-      <br key={key + 6} />,
-      "  Sep 2014 - Jun 2017 - Birmingham, UK",
-      <br key={key + 7} />,
-      "  2:1",
-      <br key={key + 8} />,
-      "  School of Metallurgy and Materials",
-      <br key={key + 9} />,
-    ];
+    const result = [];
+    let keyCounter = 1;
+
+    cvData.education.forEach((edu, index) => {
+      result.push(
+        `${edu.degree} - ${edu.institution}`,
+        <br key={key + keyCounter++} />,
+        `  ${edu.period} - ${edu.location}`,
+        <br key={key + keyCounter++} />,
+        `  ${edu.grade}`,
+        <br key={key + keyCounter++} />,
+        `  ${edu.department}`,
+        <br key={key + keyCounter++} />
+      );
+
+      // Add extra line break between entries (except for the last one)
+      if (index < cvData.education.length - 1) {
+        result.push(<br key={key + keyCounter++} />);
+      }
+    });
+
+    return result;
   },
 
   email: (key) => {
     return [
       "Email me at: ",
-      <a href="mailto:samwareing@outlook.com" key={key + 1}>
-        samwareing@outlook.com
+      <a href={`mailto:${cvData.contact.email}`} key={key + 1}>
+        {cvData.contact.email}
       </a>,
     ];
   },
 
   experience: (key) => {
-    return [
-      "Colorifix - Senior Full Stack Developer",
-      <br key={key + 1} />,
-      "  Oct 2023 – Present, Coventry, UK",
-      <br key={key + 2} />,
-      "  Led full stack development and delivery of the Webclient product, using Python (FastAPI, Neo4J), Go (PostgreSQL) and VueJS. Webclient is a web service and portal allowing customers to analyse large amounts of scientific IoT data originating from Colorifix biofermentors, as well as creating scientific reports and tracking inventory.",
-      <br key={key + 3} />,
-      "Took full ownership of the project, and provided technical leadership to junior colleagues. Directed system architecture and DevOps strategy, overseeing GitLab CI/CD, and k6 load testing. Responsible for stakeholder management with international clients, leading team meetings, and delivering presentations to the company at large.",
-      <br key={key + 4} />,
-      "Spearheaded the release of Webclient to global customers, via Google Cloud Platform (GCP). Redesigned the system into a cloud-native microservice architecture, building a new high performance service in Go with Kafka. Write throughput was improved by over 5 orders of magnitude - allowing the company to achieve real-time data analytics, scaling up from 3 to 100s of fermentors, whilst simultaneously reducing occurrences of data loss to zero, and saving over £10,000 per month on cloud costs.",
-      <br key={key + 5} />,
-      <br key={key + 6} />,
-      "Black Cow Technology - Software Developer",
-      <br key={key + 7} />,
-      "  Sep 2022 – Sep 2023, Reading, UK",
-      <br key={key + 8} />,
-      "  Backend software development for the Multiplayer Server (MPS) and Authentication Service projects. Development using Python, FastAPI, SQLAlchemy, Redis and AWS. Implemented features for the MPS library code for multiple player connection, delivering a scalable, high-performance multiplayer platform capable of supporting large concurrent player sessions. Designed developer friendly APIs, allowing game developers to implement multiplayer functionality with ease, reducing typical time to market by 60%. Implemented a comprehensive load testing suite (k6) and CLI tooling (Rust) to support rapid development cycles.",
-      <br key={key + 9} />,
-      <br key={key + 10} />,
-      "Defence Contractor - Computational Physicist",
-      <br key={key + 11} />,
-      "  Oct 2018 – Sep 2022, Reading, UK",
-      <br key={key + 12} />,
-      "  Confidential scientific software development work. Software development on a novel Monte Carlo radiation physics code for GPU (C++), an interface for deterministic radiation physics code (Python), and an internal web portal (PHP/MariaDB) serving 50+ users across 4 departments. Agile collaboration with developers in the UK and the US.",
-      <br key={key + 13} />,
-      <br key={key + 14} />,
-      "Culham Centre for Fusion Energy (CCFE) - Industrial project",
-      <br key={key + 15} />,
-      "  Jun 2018 – Sep 2018, Abingdon, UK",
-      <br key={key + 16} />,
-      "  An industrial research project in the Neutronics Team. Software development work on the integration of a custom module (Fortran95) within the Serpent Monte Carlo Reactor Physics code (C).",
-      <br key={key + 17} />,
-    ];
+    const result = [];
+    let keyCounter = 1;
+
+    cvData.experience.forEach((job, jobIndex) => {
+      result.push(
+        `${job.company} - ${job.title}`,
+        <br key={key + keyCounter++} />,
+        `  ${job.period}, ${job.location}`,
+        <br key={key + keyCounter++} />
+      );
+
+      job.description.forEach((paragraph, paraIndex) => {
+        result.push(
+          `  ${paragraph}`,
+          <br key={key + keyCounter++} />
+        );
+      });
+
+      // Add extra line break between jobs (except for the last one)
+      if (jobIndex < cvData.experience.length - 1) {
+        result.push(<br key={key + keyCounter++} />);
+      }
+    });
+
+    return result;
   },
 
   github: (key) => {
     return [
       "Check out my github at: ",
       <a
-        href="https://github.com/samwareing"
+        href={cvData.contact.github}
         key={key + 1}
         target="_blank"
         rel="noopener noreferrer"
       >
-        https://github.com/samwareing
+        {cvData.contact.github}
       </a>,
     ];
   },
 
   help: (key) => {
-    return [
+    const result = [
       "Help:",
       <br key={key + 1} />,
       "  Type one of the following commands and press enter:",
-      <br key={key + 2} />,
-      '    "about" : prints a message about me',
-      <br key={key + 3} />,
-      '    "clear" : clears the display',
-      // <br key={key + 4} />,
-      // '    "cv" : prints a link to download my curriculum vitae',
-      <br key={key + 5} />,
-      '    "education" : prints a message about my education',
-      <br key={key + 6} />,
-      '    "email" : prints my email address',
-      <br key={key + 7} />,
-      '    "experience" : prints a message about my career experience',
-      <br key={key + 8} />,
-      '    "github" : prints my github site',
-      <br key={key + 9} />,
-      '    "help" : prints this help message',
-      <br key={key + 10} />,
-      '    "misc" : prints a message about me as a person',
-      <br key={key + 11} />,
-      '    "phone" : prints my phone number',
-      <br key={key + 12} />,
-      '    "references" : prints a message about my references',
-      <br key={key + 13} />,
-      '    "skills" : prints a message about my developer skills',
-      <br key={key + 14} />,
-      '    "training" : prints a message about my professional training qualifications',
-      <br key={key + 15} />,
+      <br key={key + 2} />
     ];
+
+    let keyCounter = 3;
+    cvData.helpText.commands.forEach((cmd) => {
+      result.push(
+        `    "${cmd.name}" : ${cmd.description}`,
+        <br key={key + keyCounter++} />
+      );
+    });
+
+    return result;
   },
 
   misc: (key) => {
-    return [
-      "Music lover",
-      <br key={key + 1} />,
-      "15+ years of experience with the guitar and the piano",
-      <br key={key + 2} />,
-      "Plays in an indie rock band ",
-      <br key={key + 3} />,
-      "Enjoys the gym",
-      <br key={key + 4} />,
-      "Full UK drivers license",
-    ];
+    const result = [];
+    let keyCounter = 1;
+
+    cvData.misc.forEach((item, index) => {
+      result.push(item);
+      if (index < cvData.misc.length - 1) {
+        result.push(<br key={key + keyCounter++} />);
+      }
+    });
+
+    return result;
   },
 
   phone: (key) => {
     return [
       "Phone me at: ",
-      <a href="tel:+447903633897" key={key + 1}>
+      <a href={`tel:${cvData.contact.phone}`} key={key + 1}>
         +44 (0)7903 633897
       </a>,
     ];
   },
 
   references: (key) => {
-    return ["References are available upon request, try typing \"email\"."];
+    return [cvData.references];
   },
 
   skills: (key) => {
-    return [
+    const result = [];
+    let keyCounter = 1;
+
+    result.push(
       "Programming Languages and Databases:",
-      <br key={key + 1} />,
-      "  Go, Python, VueJS (TypeScript, JavaScript, HTML and CSS)",
-      <br key={key + 2} />,
-      "  PostgreSQL, Neo4J",
-      <br key={key + 3} />,
-      "  Bash, C/C++, Rust",
-      <br key={key + 4} />,
-      <br key={key + 5} />,
+      <br key={key + keyCounter++} />
+    );
+    cvData.skills.programmingLanguagesAndDatabases.forEach((item) => {
+      result.push(
+        `  ${item}`,
+        <br key={key + keyCounter++} />
+      );
+    });
+    result.push(<br key={key + keyCounter++} />);
+
+    result.push(
       "Technologies and Libraries:",
-      <br key={key + 6} />,
-      "  Linux, git, Docker, ",
-      <br key={key + 7} />,
-      "  FastAPI, Neomodel, SQLAlchemy, Alembic, Pydantic, Pytest,",
-      <br key={key + 8} />,
-      "  ReactJS, Postman, k6, GCP, Kafka, AWS",
-      <br key={key + 9} />,
-      <br key={key + 10} />,
+      <br key={key + keyCounter++} />
+    );
+    cvData.skills.technologiesAndLibraries.forEach((item) => {
+      result.push(
+        `  ${item}`,
+        <br key={key + keyCounter++} />
+      );
+    });
+    result.push(<br key={key + keyCounter++} />);
+
+    result.push(
       "Methodologies:",
-      <br key={key + 11} />,
-      "    Test Driven Development, ShapeUp, Agile, Scrum, Kanban",
-      <br key={key + 12} />,
-    ];
+      <br key={key + keyCounter++} />
+    );
+    cvData.skills.methodologies.forEach((item) => {
+      result.push(
+        `    ${item}`,
+        <br key={key + keyCounter++} />
+      );
+    });
+
+    return result;
   },
 
   training: (key) => {
-    return [
-      "Learning Tree International - London, UK:",
-      <br key={key + 1} />,
-      "  HTML5, CSS3 and JavaScript: Platform-Independent Web Development - Feb 2022",
-      <br key={key + 2} />,
-      "  Introduction to SQL Programming - Dec 2021",
-      <br key={key + 3} />,
-      "  Introduction to Data Science, Machine Learning & AI using Python - Mar 2021",
-      <br key={key + 4} />,
-      "  DevOps Foundation® (DOFD) - Nov 2020",
-      <br key={key + 5} />,
-      "  Advanced Python: Best Practices and Design Patterns - Apr 2020",
-      <br key={key + 6} />,
-      "  Agile Fundamentals - Sep 2019",
-      <br key={key + 7} />,
-      "  Introduction to Python - Aug 2019",
-      <br key={key + 8} />,
-      <br key={key + 9} />,
-      "JB International - London, UK:",
-      <br key={key + 10} />,
-      "  C++ Advanced, Modern C++11/14/17 - May 2019",
-      <br key={key + 11} />,
-      "  C++ Introduction - March 2019",
-      <br key={key + 12} />,
-    ];
+    const result = [];
+    let keyCounter = 1;
+
+    cvData.training.forEach((org, orgIndex) => {
+      result.push(
+        `${org.organization}:`,
+        <br key={key + keyCounter++} />
+      );
+
+      org.courses.forEach((course) => {
+        result.push(
+          `  ${course.name} - ${course.date}`,
+          <br key={key + keyCounter++} />
+        );
+      });
+
+      // Add extra line break between organizations (except for the last one)
+      if (orgIndex < cvData.training.length - 1) {
+        result.push(<br key={key + keyCounter++} />);
+      }
+    });
+
+    return result;
   },
 
   hello: (key) => {
-    return ["Hi. Try typing \"help\"."];
+    return [cvData.easterEggs.hello];
   },
   goodbye: (key) => {
-    return ["No, please don't go! Try typing \"help\"."];
+    return [cvData.easterEggs.goodbye];
   },
   more: (key) => {
-    return ["Don't be greedy. Try typing \"help\"."];
+    return [cvData.easterEggs.more];
   },
   less: (key) => {
-    return ["Less is sometimes more. Try typing \"help\"."];
+    return [cvData.easterEggs.less];
   },
   pwd: (key) => {
-    return ["You're right where you need to be. Try typing \"help\"."];
+    return [cvData.easterEggs.pwd];
   },
   ls: (key) => {
-    return ["What were you looking for? Try typing \"help\""];
+    return [cvData.easterEggs.ls];
   },
   dir: (key) => {
-    return ["What were you looking for? Try typing \"help\"."];
+    return [cvData.easterEggs.dir];
   },
   git: (key) => {
-    return ["How rude! Try typing \"help\"."];
+    return [cvData.easterEggs.git];
   },
   cp: (key) => {
-    return ["Now why would you want to do that? Try typing \"help\"."];
+    return [cvData.easterEggs.cp];
   },
   mv: (key) => {
-    return ["I don't think so. Try typing \"help\"."];
+    return [cvData.easterEggs.mv];
   },
   rm: (key) => {
-    return ["I really don't think so. Try typing \"help\"."];
+    return [cvData.easterEggs.rm];
   },
   python: (key) => {
-    return ["I really really don't think so. Try typing \"help\"."];
+    return [cvData.easterEggs.python];
   },
   go: (key) => {
-    return ["I really really don't think so. Try typing \"help\"."];
+    return [cvData.easterEggs.go];
   },
   sudo: (key) => {
-    return ["That's mean. Try typing \"help\"."]
+    return [cvData.easterEggs.sudo];
   }
 };
 
