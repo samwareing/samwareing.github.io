@@ -157,3 +157,95 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* macOS Menu Bar Styles */
+.macos-menu-bar {
+  background: linear-gradient(180deg, #001a3d 0%, #001431 100%);
+  border-radius: 6px 6px 0 0;
+  border-bottom: 1px solid #002a5a;
+  user-select: none;
+  -webkit-user-select: none;
+  flex-shrink: 0;
+}
+
+.macos-button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: filter 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.macos-button-icon {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.macos-button:hover .macos-button-icon {
+  opacity: 1;
+}
+
+.macos-button:hover {
+  filter: brightness(1.1);
+}
+
+.macos-button-close {
+  background-color: #ff5f57;
+  border: 0.5px solid #e0443e;
+}
+
+.macos-button-minimize {
+  background-color: #ffbd2e;
+  border: 0.5px solid #dea123;
+}
+
+.macos-button-maximize {
+  background-color: #28c840;
+  border: 0.5px solid #1aab29;
+}
+
+.macos-title {
+  font-size: 13px;
+  color: #ebebeb;
+  font-weight: 400;
+  text-align: center;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+/* Windows Menu Bar Styles */
+.windows-menu-bar {
+  background-color: #001431;
+  border-bottom: 1px solid #002a5a;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.windows-title {
+  font-size: 13px;
+  color: #ebebeb;
+  padding-left: 8px;
+}
+
+.windows-button {
+  width: 45px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ebebeb;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.windows-button:hover {
+  background-color: #002a5a;
+}
+
+.windows-button-close:hover {
+  background-color: #e81123;
+}

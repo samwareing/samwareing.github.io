@@ -3,6 +3,8 @@ import React, { useState, useRef, Fragment, useEffect } from "react";
 import TerminalMenuBar from "./terminalMenuBar";
 import TerminalText from "./terminalText";
 import TerminalInput from "./terminalInput";
+import { MenuBarType } from "./menuBars/menuBarFactory";
+import { getMenuBarTypeFromOS } from "../utils/detectOS";
 
 import { commands } from "./commands";
 
@@ -12,6 +14,7 @@ function TerminalBox() {
   const focusRef = useRef(null);
   const [lines, setLinesArray] = useState([]);
   const [inputValue, setInputValue] = useState("");
+  const [menuBarType] = useState(() => getMenuBarTypeFromOS());
 
   useEffect(() => {
     if (focusRef.current) {
@@ -89,22 +92,24 @@ function TerminalBox() {
 
   return (
     <Fragment>
-      <div
-        className="d-flex bg-dark rounded overflow-auto terminal-box"
-        onClick={handleClick}
-        style={{
-          flexDirection: "column-reverse",
-        }}
-      >
-        <div className="m-2">
-          <TerminalMenuBar/>
-          <TerminalText lines={lines} />
-          <TerminalInput
-            focusRef={focusRef}
-            onChange={handleChange}
-            value={inputValue}
-            onKeyPress={handleKeyPress}
-          />
+      <div className="d-flex flex-column bg-dark rounded overflow-hidden terminal-box">
+        <TerminalMenuBar menuBarType={menuBarType} />
+        <div
+          className="d-flex flex-grow-1 overflow-auto"
+          onClick={handleClick}
+          style={{
+            flexDirection: "column-reverse",
+          }}
+        >
+          <div className="m-2">
+            <TerminalText lines={lines} />
+            <TerminalInput
+              focusRef={focusRef}
+              onChange={handleChange}
+              value={inputValue}
+              onKeyPress={handleKeyPress}
+            />
+          </div>
         </div>
       </div>
     </Fragment>

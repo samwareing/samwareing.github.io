@@ -1,7 +1,10 @@
-import React, { Fragment } from "react";
+import React from "react";
+import { getMenuBarComponent, MenuBarType } from "./menuBars/menuBarFactory";
 
-const TerminalMenuBar = () => {
-  return <Fragment></Fragment>;
+
+const TerminalMenuBar = ({ menuBarType = MenuBarType.MACOS }) => {
+  const MenuBarComponent = getMenuBarComponent(menuBarType);
+  return <MenuBarComponent />;
 };
 
 export default TerminalMenuBar;
