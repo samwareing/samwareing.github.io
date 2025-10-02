@@ -79,6 +79,15 @@ function TerminalBox() {
   };
 
   const handleKeyPress = (event) => {
+    if (event.ctrlKey && event.key === 'c') {
+      event.preventDefault();
+      setIsShaking(true);
+      setTimeout(() => {
+        setIsShaking(false);
+      }, 250);
+      return;
+    }
+
     // keyCode 13 is the enter key
     if (event.keyCode === 13) {
       const command = event.target.value.trim();
