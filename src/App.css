@@ -5,7 +5,7 @@
 
 @media (max-width: 768px) {
   .terminal-box {
-    height: 90vh;
+    height: 98vh;
     width: 95vw;
   }
 
@@ -23,7 +23,7 @@
 
 @media (max-width: 768px) {
   .terminal-box {
-    height: 90dvh;
+    height: 98dvh;
   }
 
   main {
