@@ -1,4 +1,4 @@
-import React, { useState, useRef, Fragment } from "react";
+import React, { useState, useRef, Fragment, useEffect } from "react";
 
 import TerminalMenuBar from "./terminalMenuBar";
 import TerminalText from "./terminalText";
@@ -12,6 +12,12 @@ function TerminalBox() {
   const focusRef = useRef(null);
   const [lines, setLinesArray] = useState([]);
   const [inputValue, setInputValue] = useState("");
+
+  useEffect(() => {
+    if (focusRef.current) {
+      focusRef.current.focus();
+    }
+  }, []);
 
   const handleChange = (e) => {
     setInputValue(e.target.value);
