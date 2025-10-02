@@ -14,11 +14,12 @@ const TerminalInput = ({ focusRef, onChange, value, onKeyPress }) => {
           <input
             autoFocus
             ref={focusRef}
-            className="bg-dark text-white"
+            className="bg-dark text-white terminal-input-placeholder"
             type="text"
             onChange={(event) => onChange(event)}
             value={value}
             onKeyUp={(event) => onKeyPress(event)}
+            placeholder="Try typing something..."
             style={{
               border: "0",
               outline: "none",
