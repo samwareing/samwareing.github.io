@@ -3,7 +3,6 @@ import React, { useState, useRef, Fragment, useEffect } from "react";
 import TerminalMenuBar from "./terminalMenuBar";
 import TerminalText from "./terminalText";
 import TerminalInput from "./terminalInput";
-import { MenuBarType } from "./menuBars/menuBarFactory";
 import { getMenuBarTypeFromOS } from "../utils/detectOS";
 
 import { commands } from "./commands";
@@ -44,6 +43,7 @@ function TerminalBox() {
       ...lines,
       ...htmlElements,
       <br key={lines.length + htmlElements.length} />,
+      <span key={lines.length + htmlElements.length + 1} className="d-block mb-2"></span>,
     ]);
   };
 
@@ -57,6 +57,7 @@ function TerminalBox() {
       ...lines,
       errorMessage,
       <br key={lines.length} />,
+      <span key={lines.length + 1} className="d-block mb-2"></span>,
     ]);
   };
 
