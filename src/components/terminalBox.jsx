@@ -10,6 +10,8 @@ import { commands } from "./commands";
 
 const allowedCommands = Object.keys(commands);
 
+const enterKeyCode = 13;
+
 function TerminalBox() {
   const focusRef = useRef(null);
   const [lines, setLinesArray] = useState([]);
@@ -89,7 +91,7 @@ function TerminalBox() {
     }
 
     // keyCode 13 is the enter key
-    if (event.keyCode === 13) {
+    if (event.keyCode === enterKeyCode) {
       const command = event.target.value.trim();
       addToLines(command);
       setInputValue("");
