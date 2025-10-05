@@ -1,4 +1,4 @@
-import cvData from '../data/cvData.json';
+import cvData from '../../data/cvData.json';
 
 const commands = {
   about: (key) => {

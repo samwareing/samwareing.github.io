@@ -3,7 +3,7 @@ import React, { useState, useRef, Fragment, useEffect } from "react";
 import TerminalMenuBar from "./terminalMenuBar";
 import TerminalText from "./terminalText";
 import TerminalInput from "./terminalInput";
-import { getMenuBarTypeFromOS } from "../utils/detectOS";
+import { getMenuBarTypeFromOS } from "../../utils/detectOS";
 
 import { commands } from "./commands";
 
@@ -11,7 +11,7 @@ const allowedCommands = Object.keys(commands);
 
 const enterKeyCode = 13;
 
-function TerminalBox() {
+function TerminalBox({ isDeveloperMode }) {
   const focusRef = useRef(null);
   const [lines, setLinesArray] = useState([]);
   const [inputValue, setInputValue] = useState("");
@@ -38,7 +38,7 @@ function TerminalBox() {
   };
 
   const addCommandValue = (enteredCommand) => {
-    let htmlElements = commands[enteredCommand](lines.length);
+    let htmlElements = commands[enteredCommand](lines.length, isDeveloperMode);
     setLinesArray((lines) => [
       ...lines,
       ...htmlElements,
