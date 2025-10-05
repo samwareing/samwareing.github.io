@@ -99,14 +99,12 @@ const commands = {
     const result = [];
     let keyCounter = 1;
 
-    // Description
     result.push(
       cvData.helpText.description,
       <br key={key + keyCounter++} />,
       <br key={key + keyCounter++} />
     );
 
-    // Usage
     result.push(
       "Usage:",
       <br key={key + keyCounter++} />,
@@ -115,16 +113,13 @@ const commands = {
       <br key={key + keyCounter++} />
     );
 
-    // Available Commands header
     result.push(
       "Available Commands:",
       <br key={key + keyCounter++} />
     );
 
-    // Find the longest command name for alignment
     const maxLength = Math.max(...cvData.helpText.commands.map(cmd => cmd.name.length));
 
-    // List commands with aligned descriptions (Cobra style)
     cvData.helpText.commands.forEach((cmd) => {
       const padding = ' '.repeat(maxLength - cmd.name.length + 2);
       result.push(
@@ -133,7 +128,6 @@ const commands = {
       );
     });
 
-    // Footer
     result.push(
       <br key={key + keyCounter++} />,
       cvData.helpText.footer
@@ -228,7 +222,7 @@ const commands = {
         );
       });
 
-      // Add extra line break between organizations (except for the last one)
+      // Add extra line break between organisations (except for the last one)
       if (orgIndex < cvData.training.length - 1) {
         result.push(<br key={key + keyCounter++} />);
       }
