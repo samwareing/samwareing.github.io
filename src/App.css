@@ -255,10 +255,12 @@
   border: 1px solid var(--color-bg-dark);
   border-radius: 8px;
   cursor: pointer;
-  transition: all 0.3s ease;
   overflow: hidden;
   width: 100%;
   flex-shrink: 0;
+  max-height: 120px;
+  transition: max-height 0.6s ease-in-out, border-color 0.3s ease;
+  position: relative;
 }
 
 .cv-card:hover {
@@ -267,6 +269,7 @@
 
 .cv-card.expanded {
   border-color: var(--color-bg-dark);
+  max-height: 1000px;
 }
 
 .card-header {
@@ -294,6 +297,8 @@
   color: var(--color-bg-dark);
   margin-top: 0.5rem;
   padding-top: 0.5rem;
+  opacity: 1;
+  transition: opacity 0.3s ease;
 }
 
 
