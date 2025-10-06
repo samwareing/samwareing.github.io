@@ -40,11 +40,27 @@
     touch-action: none;
   }
 
-    overflow: visible;
+  /* Allow scrolling for terminal view */
+  main:not(.allow-scrolling) .terminal-content {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
+    overscroll-behavior: contain;
+  }
+
+  main.allow-scrolling {
+    overflow: auto;
+    position: static;
+    height: auto;
+    touch-action: pan-y;
+  }
+
   main.allow-scrolling .hiring-manager-view {
+    overflow: visible;
     touch-action: pan-y;
     position: relative;
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
   }
 
   body.allow-scrolling {
@@ -53,11 +69,19 @@
     height: auto;
   }
 
+  html.allow-scrolling {
+    overflow: auto;
+    position: static;
+    height: auto;
+  }
+
   .terminal-box {
     width: 100%;
-    height: 100%;
-    max-height: 100%;
+    height: calc(100vh - 120px);
+    max-height: calc(100vh - 120px);
     position: relative;
+    display: flex;
+    flex-direction: column;
   }
 
   .text-monospace, .text-white, span {
@@ -84,6 +108,8 @@
   touch-action: pan-y;
   overscroll-behavior: contain;
   min-height: 0;
+  max-height: 100%;
+  overflow-y: auto;
 }
 
 .terminal-input-container {
@@ -100,6 +126,9 @@
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    flex: 1;
+    overflow-y: auto;
+    min-height: 0;
   }
 
   .terminal-content::-webkit-scrollbar {
@@ -302,8 +331,9 @@
 @media (max-width: 768px) {
   .hiring-manager-view {
     width: 100%;
-    height: calc(100vh - 60px);
-    overflow-y: auto;
+    height: auto;
+    min-height: calc(100vh - 60px);
+    overflow-y: visible;
     -webkit-overflow-scrolling: touch;
     touch-action: pan-y;
     overscroll-behavior: contain;

@@ -14,12 +14,15 @@ function App() {
   useEffect(() => {
     if (!isDeveloperMode) {
       document.body.classList.add('allow-scrolling');
+      document.documentElement.classList.add('allow-scrolling');
     } else {
       document.body.classList.remove('allow-scrolling');
+      document.documentElement.classList.remove('allow-scrolling');
     }
 
     return () => {
       document.body.classList.remove('allow-scrolling');
+      document.documentElement.classList.remove('allow-scrolling');
     };
   }, [isDeveloperMode]);
 
