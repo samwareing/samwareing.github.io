@@ -43,15 +43,16 @@ function TerminalBox({ isDeveloperMode }) {
       ...lines,
       ...htmlElements,
       <br key={lines.length + htmlElements.length} />,
-      <span key={lines.length + htmlElements.length + 1} className="d-block mb-2"></span>,
+      <span
+        key={lines.length + htmlElements.length + 1}
+        className="d-block mb-2"
+      ></span>,
     ]);
   };
 
   const addErrorString = (enteredCommand) => {
     const errorMessage =
-      "sam-shell: command not found: " +
-      enteredCommand +
-      " Try typing \"help\".";
+      "sam-shell: command not found: " + enteredCommand + ' Try typing "help".';
 
     setLinesArray((lines) => [
       ...lines,
@@ -82,7 +83,7 @@ function TerminalBox({ isDeveloperMode }) {
   };
 
   const handleKeyPress = (event) => {
-    if (event.ctrlKey && event.key === 'c') {
+    if (event.ctrlKey && event.key === "c") {
       event.preventDefault();
       setIsShaking(true);
       setTimeout(() => {
@@ -112,8 +113,15 @@ function TerminalBox({ isDeveloperMode }) {
 
   return (
     <Fragment>
-      <div className={`d-flex flex-column bg-dark rounded overflow-hidden terminal-box ${isShaking ? 'shake' : ''}`}>
-        <TerminalMenuBar menuBarType={menuBarType} onButtonClick={handleMenuButtonClick} />
+      <div
+        className={`d-flex flex-column bg-dark rounded overflow-hidden terminal-box ${
+          isShaking ? "shake" : ""
+        }`}
+      >
+        <TerminalMenuBar
+          menuBarType={menuBarType}
+          onButtonClick={handleMenuButtonClick}
+        />
         <div
           className="d-flex flex-grow-1 overflow-auto terminal-content"
           onClick={handleClick}
