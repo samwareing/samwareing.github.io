@@ -7,7 +7,6 @@
   },
   "contact": {
     "email": "samwareing@outlook.com",
-    "phone": "+447903633897",
     "github": "https://github.com/samwareing"
   },
   "education": [
@@ -173,10 +172,6 @@
       {
         "name": "misc",
         "description": "Show personal interests and hobbies"
-      },
-      {
-        "name": "phone",
-        "description": "Display phone number"
       },
       {
         "name": "references",

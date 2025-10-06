@@ -34,7 +34,6 @@ function HiringManagerView() {
         return (
           <div>
             <p><strong>Email:</strong> <a href={`mailto:${data.email}`}>{data.email}</a></p>
-            <p><strong>Phone:</strong> <a href={`tel:${data.phone}`}>{data.phone}</a></p>
             <p><strong>GitHub:</strong> <a href={data.github} target="_blank" rel="noopener noreferrer">{data.github}</a></p>
           </div>
         );

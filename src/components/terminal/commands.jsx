@@ -150,15 +150,6 @@ const commands = {
     return result;
   },
 
-  phone: (key) => {
-    return [
-      "Phone me at: ",
-      <a href={`tel:${cvData.contact.phone}`} key={key + 1}>
-        +44 (0)7903 633897
-      </a>,
-    ];
-  },
-
   references: (key) => {
     return [cvData.references];
   },
