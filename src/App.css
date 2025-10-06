@@ -285,6 +285,31 @@
   margin: 0 0 0.5rem 0;
   color: var(--color-bg-dark);
   text-transform: capitalize;
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.card-title::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--color-red);
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: left;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .cv-card:hover .card-title::after {
+    width: 100%;
+  }
+}
+
+.cv-card.expanded .card-title::after {
+  width: 100%;
 }
 
 .card-description {
