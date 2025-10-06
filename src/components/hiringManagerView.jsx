@@ -160,7 +160,17 @@ function HiringManagerView() {
         );
 
       case "references":
-        return <p>{data}</p>;
+        return (
+          <div>
+            <p>{cvData["referencesHiringManager"]}</p>
+            <p>
+              Email:{" "}
+              <a href={`mailto:${cvData["contact"].email}`}>
+                {cvData["contact"].email}
+              </a>
+            </p>
+          </div>
+        );
 
       default:
         return <p>No information available.</p>;

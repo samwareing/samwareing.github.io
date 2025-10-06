@@ -204,6 +204,7 @@
     "go": "I really really don't think so. Try typing \"help\".",
     "sudo": "That's mean, I don't even have a sudoers file. This incident will not be reported as this is a static site. Try typing \"help\"."
   },
-  "references": "References are available upon request, try typing \"email\"."
+  "references": "References are available upon request, try typing \"email\".",
+  "referencesHiringManager": "References are available upon request."
 }
 
