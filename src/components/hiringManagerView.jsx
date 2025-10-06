@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import cvData from '../data/cvData.json';
+import React, { useState } from "react";
+import cvData from "../data/cvData.json";
 
 function HiringManagerView() {
   const [expandedCard, setExpandedCard] = useState(null);
@@ -20,43 +20,57 @@ function HiringManagerView() {
     }
 
     switch (commandName) {
-      case 'about':
+      case "about":
         return (
           <div>
-            <p><strong>Location:</strong> {data.location}</p>
+            <p>
+              <strong>Location:</strong> {data.location}
+            </p>
+            <p>
+              <strong>GitHub:</strong>{" "}
+              <a
+                href={cvData["contact"].github}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {cvData["contact"].github}
+              </a>
+            </p>
             <p>{data.summary}</p>
           </div>
         );
 
-      case 'contact':
-        return (
-          <div>
-            <p><strong>Email:</strong> <a href={`mailto:${data.email}`}>{data.email}</a></p>
-            <p><strong>GitHub:</strong> <a href={data.github} target="_blank" rel="noopener noreferrer">{data.github}</a></p>
-          </div>
-        );
-
-      case 'education':
+      case "education":
         return (
           <div>
             {data.map((edu, index) => (
               <div key={index} className="mb-3">
                 <h5>{edu.degree}</h5>
-                <p><strong>{edu.institution}</strong> - {edu.period}</p>
-                <p>{edu.location} | Grade: {edu.grade}</p>
-                {edu.department && <p><em>{edu.department}</em></p>}
+                <p>
+                  <strong>{edu.institution}</strong> - {edu.period}
+                </p>
+                <p>
+                  {edu.location} | Grade: {edu.grade}
+                </p>
+                {edu.department && (
+                  <p>
+                    <em>{edu.department}</em>
+                  </p>
+                )}
               </div>
             ))}
           </div>
         );
 
-      case 'experience':
+      case "experience":
         return (
           <div>
             {data.map((exp, index) => (
               <div key={index} className="mb-4">
                 <h5>{exp.title}</h5>
-                <p><strong>{exp.company}</strong> - {exp.period}</p>
+                <p>
+                  <strong>{exp.company}</strong> - {exp.period}
+                </p>
                 <p>{exp.location}</p>
                 <ul>
                   {exp.description.map((desc, descIndex) => (
@@ -68,7 +82,7 @@ function HiringManagerView() {
           </div>
         );
 
-      case 'skills':
+      case "skills":
         return (
           <div>
             <div className="mb-3">
@@ -98,7 +112,7 @@ function HiringManagerView() {
           </div>
         );
 
-      case 'training':
+      case "training":
         return (
           <div>
             {data.map((org, index) => (
@@ -116,7 +130,7 @@ function HiringManagerView() {
           </div>
         );
 
-      case 'misc':
+      case "misc":
         return (
           <div>
             <ul>
@@ -127,7 +141,7 @@ function HiringManagerView() {
           </div>
         );
 
-      case 'references':
+      case "references":
         return <p>{data}</p>;
 
       default:
@@ -136,27 +150,42 @@ function HiringManagerView() {
   };
 
   const commands = [
-    { name: 'about', description: 'Professional summary' },
-    { name: 'experience', description: 'Professional work experience and achievements' },
-    { name: 'skills', description: 'Technical skills and proficiencies' },
-    { name: 'training', description: 'Professional training and certifications' },
-    { name: 'education', description: 'Educational background and qualifications' },
-    { name: 'contact', description: 'Contact information and links' },
-    { name: 'misc', description: 'Personal interests and hobbies' },
-    { name: 'references', description: 'Information about references' }
+    { name: "about", description: "Professional summary" },
+    {
+      name: "experience",
+      description: "Professional work experience and achievements",
+    },
+    { name: "skills", description: "Technical skills and proficiencies" },
+    {
+      name: "training",
+      description: "Professional training and certifications",
+    },
+    {
+      name: "education",
+      description: "Educational background and qualifications",
+    },
+    { name: "misc", description: "Personal interests and hobbies" },
+    { name: "references", description: "Information about references" },
   ];
 
   return (
     <div className="hiring-manager-view">
       <div className="name-section">
-        <h3>{cvData['about'].name}</h3>
-        <h4>{cvData['about'].title}</h4>
+        <h3>{cvData["about"].name}</h3>
+        <h4>{cvData["about"].title}</h4>
+        <p>
+          <a href={`mailto:${cvData["contact"].email}`}>
+            {cvData["contact"].email}
+          </a>
+        </p>
       </div>
       <div className="cards-container">
         {commands.map((command) => (
           <div
             key={command.name}
-            className={`cv-card ${expandedCard === command.name ? 'expanded' : ''}`}
+            className={`cv-card ${
+              expandedCard === command.name ? "expanded" : ""
+            }`}
             onClick={() => handleCardClick(command.name)}
           >
             <div className="card-header">
