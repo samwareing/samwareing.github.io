@@ -243,25 +243,10 @@
 .card-content {
   padding: 0 1.5rem 1.5rem 1.5rem;
   color: var(--color-bg-dark);
-  animation: slideDown 0.3s ease-out;
   margin-top: 0.5rem;
   padding-top: 0.5rem;
 }
 
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    max-height: 0;
-    padding-top: 0;
-    margin-top: 0;
-  }
-  to {
-    opacity: 1;
-    max-height: 1000px;
-    padding-top: 0.5rem;
-    margin-top: 0.5rem;
-  }
-}
 
 .card-content h4,
 .card-content h5 {
