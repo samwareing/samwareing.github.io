@@ -212,6 +212,7 @@
   height: 90vh;
   display: flex;
   flex-direction: column;
+  align-self: flex-start;
   margin-top: 0.5rem;
 }
 

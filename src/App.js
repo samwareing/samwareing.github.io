@@ -31,7 +31,7 @@ function App() {
       <div className="d-flex justify-content-center pt-2">
         <DeveloperToggle isDeveloperMode={isDeveloperMode} onToggle={handleToggleMode} />
       </div>
-      <div className="d-flex flex-grow-1 align-items-start justify-content-center">
+      <div className="d-flex flex-grow-1 align-items-center justify-content-center">
         {isDeveloperMode ? (
           <TerminalBox isDeveloperMode={isDeveloperMode} />
         ) : (
