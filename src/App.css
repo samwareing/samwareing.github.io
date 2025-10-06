@@ -270,7 +270,7 @@
 
 .cv-card.expanded {
   border-color: var(--color-bg-dark);
-  max-height: 1000px;
+  max-height: 5000px;
 }
 
 .card-header {
