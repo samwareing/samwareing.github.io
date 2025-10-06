@@ -19,7 +19,8 @@ function HiringManagerView() {
         if (cardElement && cardsContainerRef.current) {
           const containerTop = cardsContainerRef.current.offsetTop;
           const cardTop = cardElement.offsetTop;
-          const scrollTop = cardTop - containerTop;
+          const borderWidth = 1;
+          const scrollTop = cardTop - containerTop - borderWidth;
 
           cardsContainerRef.current.scrollTo({
             top: scrollTop,
