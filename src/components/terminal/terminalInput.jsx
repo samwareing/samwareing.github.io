@@ -19,7 +19,7 @@ const TerminalInput = ({ focusRef, onChange, value, onKeyPress }) => {
             onChange={(event) => onChange(event)}
             value={value}
             onKeyDown={(event) => onKeyPress(event)}
-            placeholder="Try typing something..."
+            placeholder='Try typing something, e.g. "help"...'
             style={{
               border: "0",
               outline: "none",
