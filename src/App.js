@@ -2,9 +2,10 @@ import "./App.css";
 import { useState } from "react";
 import TerminalBox from "./components/terminal/terminalBox";
 import DeveloperToggle from "./components/developerToggle";
+import HiringManagerView from "./components/hiringManagerView";
 
 function App() {
-  const [isDeveloperMode, setIsDeveloperMode] = useState(true);
+  const [isDeveloperMode, setIsDeveloperMode] = useState(false);
 
   const handleToggleMode = () => {
     setIsDeveloperMode(!isDeveloperMode);
@@ -16,7 +17,11 @@ function App() {
         <DeveloperToggle isDeveloperMode={isDeveloperMode} onToggle={handleToggleMode} />
       </div>
       <div className="d-flex flex-grow-1 align-items-center justify-content-center">
-        {isDeveloperMode && <TerminalBox isDeveloperMode={isDeveloperMode} />}
+        {isDeveloperMode ? (
+          <TerminalBox isDeveloperMode={isDeveloperMode} />
+        ) : (
+          <HiringManagerView />
+        )}
       </div>
     </main>
   );
