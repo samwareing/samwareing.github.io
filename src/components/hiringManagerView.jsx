@@ -23,8 +23,6 @@ function HiringManagerView() {
       case 'about':
         return (
           <div>
-            <h4>{data.name}</h4>
-            <h5>{data.title}</h5>
             <p><strong>Location:</strong> {data.location}</p>
             <p>{data.summary}</p>
           </div>
@@ -138,7 +136,7 @@ function HiringManagerView() {
   };
 
   const commands = [
-    { name: 'about', description: 'Professional summary and contact information' },
+    { name: 'about', description: 'Professional summary' },
     { name: 'experience', description: 'Professional work experience and achievements' },
     { name: 'skills', description: 'Technical skills and proficiencies' },
     { name: 'training', description: 'Professional training and certifications' },
@@ -149,7 +147,11 @@ function HiringManagerView() {
   ];
 
   return (
-    <div className="non-developer-view">
+    <div className="hiring-manager-view">
+      <div className="name-section">
+        <h3>{cvData['about'].name}</h3>
+        <h4>{cvData['about'].title}</h4>
+      </div>
       <div className="cards-container">
         {commands.map((command) => (
           <div
