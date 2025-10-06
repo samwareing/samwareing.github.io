@@ -28,10 +28,10 @@ function App() {
 
   return (
     <main className={`container-fluid min-vh-100 d-flex flex-column p-2 p-md-0 ${!isDeveloperMode ? 'allow-scrolling' : ''}`}>
-      <div className="d-flex justify-content-center pt-3">
+      <div className="d-flex justify-content-center pt-2">
         <DeveloperToggle isDeveloperMode={isDeveloperMode} onToggle={handleToggleMode} />
       </div>
-      <div className="d-flex flex-grow-1 align-items-center justify-content-center">
+      <div className="d-flex flex-grow-1 align-items-start justify-content-center">
         {isDeveloperMode ? (
           <TerminalBox isDeveloperMode={isDeveloperMode} />
         ) : (
