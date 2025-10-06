@@ -229,6 +229,10 @@ function HiringManagerView() {
             )}
           </div>
         ))}
+        <div className="footnote-section">
+          <p>Built in ReactJS, deployed via GitHub Pages</p>
+          <p>© 2025 Sam Wareing</p>
+        </div>
       </div>
     </div>
   );
