@@ -1,14 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import cvData from "../data/cvData.json";
 
 function HiringManagerView() {
   const [expandedCard, setExpandedCard] = useState(null);
+  const cardsContainerRef = useRef(null);
 
   const handleCardClick = (cardName) => {
     if (expandedCard === cardName) {
       setExpandedCard(null);
     } else {
       setExpandedCard(cardName);
+
+      // Scroll the card to the top of the container
+      setTimeout(() => {
+        const cardElement = document.querySelector(
+          `[data-card-name="${cardName}"]`
+        );
+        if (cardElement && cardsContainerRef.current) {
+          const containerTop = cardsContainerRef.current.offsetTop;
+          const cardTop = cardElement.offsetTop;
+          const scrollTop = cardTop - containerTop;
+
+          cardsContainerRef.current.scrollTo({
+            top: scrollTop,
+            behavior: "smooth",
+          });
+        }
+      }, 100); // Small delay to ensure the card has expanded
     }
   };
 
@@ -179,10 +197,11 @@ function HiringManagerView() {
           </a>
         </p>
       </div>
-      <div className="cards-container">
+      <div className="cards-container" ref={cardsContainerRef}>
         {commands.map((command) => (
           <div
             key={command.name}
+            data-card-name={command.name}
             className={`cv-card ${
               expandedCard === command.name ? "expanded" : ""
             }`}
